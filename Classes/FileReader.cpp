@@ -70,11 +70,20 @@ void FileReader::read_Airlines()
     fin.close();
 }
 
-FileReader::FileReader() {
+FileReader::FileReader() = default;
 
+FileReader::~FileReader() = default;
+
+unordered_map<string, Airport> FileReader::get_Airports() const {
+    return Airports;
 }
 
-FileReader::~FileReader() {
-
+unordered_map<string, Airline> FileReader::get_Airlines() const {
+    return Airlines;
 }
+
+Graph<string> FileReader::get_FlightGraph() const {
+    return FlightGraph;
+}
+
 

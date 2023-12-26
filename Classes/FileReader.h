@@ -26,10 +26,19 @@ private:
     void read_Airports();
     void read_Airlines();
 
+    //void save_Flights();
+    //void save_Airports();
+    //void save_Airlines();
 public:
     FileReader();
     ~FileReader();
     void read_Data();
+    //void save_Data();
+
+    //getters
+    Graph<string> get_FlightGraph() const;
+    unordered_map<string, Airline> get_Airlines() const;
+    unordered_map<string, Airport> get_Airports() const;
 };
 
 
