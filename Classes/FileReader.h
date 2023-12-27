@@ -31,7 +31,7 @@ private:
     //void save_Airlines();
 public:
     FileReader();
-    ~FileReader();
+    FileReader();
     void read_Data();
     //void save_Data();
 
