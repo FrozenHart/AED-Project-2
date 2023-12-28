@@ -46,6 +46,22 @@ void FileReader::read_Airports()
         if(Airports.find(Code) == Airports.end()) {
             Airports.insert(make_pair(Code, Airport(Code, Name, City, Country, stof(Latitude), stof(Longitude))));
         }
+        if(Airports_Cities.find(City) == Airports_Cities.end()) {
+            vector<string> temp;
+            temp.push_back(Code);
+            Airports_Cities.insert(make_pair(City, temp));
+        }
+        else {
+            Airports_Cities.at(City).push_back(Code);
+        }
+        if(Cities_Cuntries.find(Country) == Cities_Cuntries.end()) {
+            vector<string> temp;
+            temp.push_back(City);
+            Cities_Cuntries.insert(make_pair(Country, temp));
+        }
+        else {
+            Cities_Cuntries.at(Country).push_back(City);
+        }
     }
     fin.close();
 
@@ -84,6 +100,14 @@ unordered_map<string, Airline> FileReader::get_Airlines() const {
 
 Graph<string> FileReader::get_FlightGraph() const {
     return FlightGraph;
+}
+
+unordered_map<string, vector<string>> FileReader::get_Airports_Cities() const {
+    return Airports_Cities;
+}
+
+unordered_map<string, vector<string>> FileReader::get_Cities_Countries() const {
+    return Cities_Cuntries;
 }
 
 

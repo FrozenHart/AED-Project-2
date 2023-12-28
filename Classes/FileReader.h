@@ -20,7 +20,8 @@ private:
     static Graph<string> FlightGraph;
     unordered_map<string, Airline> Airlines;
     unordered_map<string, Airport> Airports;
-
+    unordered_map<string, vector<string>> Airports_Cities;
+    unordered_map<string, vector<string>> Cities_Cuntries;
     //private functions
     void read_Flights();
     void read_Airports();
@@ -39,6 +40,8 @@ public:
     Graph<string> get_FlightGraph() const;
     unordered_map<string, Airline> get_Airlines() const;
     unordered_map<string, Airport> get_Airports() const;
+    unordered_map<string, vector<string>> get_Airports_Cities() const;
+    unordered_map<string, vector<string>> get_Cities_Countries() const;
 };
 
 
