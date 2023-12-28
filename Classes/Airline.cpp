@@ -8,7 +8,7 @@ Airline::Airline(string code, string name, string callsign, string country) {
     this->country = country;
 }
 
-Airline::Airline() {
+Airline::~Airline() {
 
 }
 

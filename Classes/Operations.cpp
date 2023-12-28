@@ -1,7 +1,3 @@
-//
-// Created by Bruno Esteves on 25/12/2023.
-//
-
 #include "Operations.h"
 
 string Operations::get_Airport_Coordinates(float latitude, float longitude,FileReader fileReader) {

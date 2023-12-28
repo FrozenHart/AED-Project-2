@@ -78,12 +78,13 @@ class Graph {
     int _index_;                        // auxiliary field
     stack<Vertex<T>> _stack_;           // auxiliary field
     list<list<T>> _list_sccs_;        // auxiliary field
-
+    int numbedges;                      // auxiliary field
     void dfsVisit(Vertex<T> *v,  vector<T> & res) const;
     bool dfsIsDAG(Vertex<T> *v) const;
 public:
     Vertex<T> *findVertex(const T &in) const;
     int getNumVertex() const;
+    int getNumEdges() const;
     bool addVertex(const T &in);
     bool removeVertex(const T &in);
     bool addEdge(const T &sourc, const T &dest, string w);
@@ -217,6 +218,11 @@ void Vertex<T>::setAdj(const vector<Edge<T>> &adj) {
     Vertex::adj = adj;
 }
 
+template<class T>
+int Graph<T>::getNumEdges() const {
+    return numbedges;
+}
+
 
 /*
  *  Adds a vertex with a given content or info (in) to a graph (this).
@@ -239,6 +245,7 @@ bool Graph<T>::addVertex(const T &in) {
  */
 template <class T>
 bool Graph<T>::addEdge(const T &sourc, const T &dest, string w) {
+    numbedges++;
     auto v1 = findVertex(sourc);
     auto v2 = findVertex(dest);
     Vertex<T> *NULL;
