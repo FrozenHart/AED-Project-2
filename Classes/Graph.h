@@ -164,7 +164,6 @@ Vertex<T> * Graph<T>::findVertex(const T &in) const {
     for (auto v : vertexSet)
         if (v->info == in)
             return v;
-    auto NULL = nullptr;
     return NULL;
 }
 
@@ -230,7 +229,6 @@ int Graph<T>::getNumEdges() const {
  */
 template <class T>
 bool Graph<T>::addVertex(const T &in) {
-    auto NULL;
     if (findVertex(in) != NULL)
         return false;
     vertexSet.push_back(new Vertex<T>(in));
@@ -248,7 +246,6 @@ bool Graph<T>::addEdge(const T &sourc, const T &dest, string w) {
     numbedges++;
     auto v1 = findVertex(sourc);
     auto v2 = findVertex(dest);
-    Vertex<T> *NULL;
     if (v1 == NULL || v2 == NULL)
         return false;
     v1->addEdge(v2,w);
@@ -274,7 +271,6 @@ template <class T>
 bool Graph<T>::removeEdge(const T &sourc, const T &dest) {
     auto v1 = findVertex(sourc);
     auto v2 = findVertex(dest);
-    auto NULL;
     if (v1 == NULL || v2 == NULL)
         return false;
     return v1->removeEdgeTo(v2);
@@ -379,7 +375,6 @@ template <class T>
 vector<T> Graph<T>::bfs(const T & source) const {
     vector<T> res;
     auto s = findVertex(source);
-    auto NULL = nullptr;
     if (s == NULL)
         return res;
     queue<Vertex<T> *> q;

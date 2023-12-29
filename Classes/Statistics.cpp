@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 #include "Statistics.h"
 
 int Statistics::number_of_airports(const FileReader& fileReader) {
@@ -118,7 +114,75 @@ int Statistics::number_of_destinations_from_country(const string &countryName, c
     return ((int) destinations.size());
 }
 
-int Statistics::number_of_reacheble_destinations_from_airport(const string &airportCode, const FileReader &fileReader, const int number_of_stops) {
+int Statistics::number_of_reacheble_contries_from_airport(const string &airportCode, const FileReader &fileReader,int number_of_stops) {
+    unordered_set<string> countrys;
+    Graph graph = fileReader.get_FlightGraph();
+
+    Vertex<string>* startVertex = graph.findVertex(airportCode);
+
+    for (const auto& vertex : graph.getVertexSet()) {
+        vertex->setVisited(false);
+    }
+
+    std::queue<std::pair<Vertex<string>*, int>> bfsQueue;
+    bfsQueue.push({startVertex, 0});
+    startVertex->setVisited(true);
+
+    while (!bfsQueue.empty()) {
+        auto vertex = bfsQueue.front();
+        bfsQueue.pop();
+
+        if (vertex.second < number_of_stops) {
+            for (const auto& edge : vertex.first->getAdj()) {
+                if (!edge.getDest()->isVisited()) {
+                    edge.getDest()->setVisited(true);
+                    bfsQueue.push({edge.getDest(), vertex.second + 1});
+                    if(countrys.find(fileReader.get_Airports().find(edge.getDest()->getInfo())->second.get_Country())==countrys.end())
+                    {
+                        countrys.insert(fileReader.get_Airports().find(edge.getDest()->getInfo())->second.get_Country());
+                    }
+                }
+            }
+        }
+    }
+    return ((int) countrys.size());
+}
+
+int Statistics::number_of_reacheble_cities_from_airport(const string &airportCode, const FileReader &fileReader,int number_of_stops) {
+    unordered_set<string> cities;
+    Graph graph = fileReader.get_FlightGraph();
+
+    Vertex<string>* startVertex = graph.findVertex(airportCode);
+
+    for (const auto& vertex : graph.getVertexSet()) {
+        vertex->setVisited(false);
+    }
+
+    std::queue<std::pair<Vertex<string>*, int>> bfsQueue;
+    bfsQueue.push({startVertex, 0});
+    startVertex->setVisited(true);
+
+    while (!bfsQueue.empty()) {
+        auto vertex = bfsQueue.front();
+        bfsQueue.pop();
+
+        if (vertex.second < number_of_stops) {
+            for (const auto& edge : vertex.first->getAdj()) {
+                if (!edge.getDest()->isVisited()) {
+                    edge.getDest()->setVisited(true);
+                    bfsQueue.push({edge.getDest(), vertex.second + 1});
+                    if(cities.find(fileReader.get_Airports().find(edge.getDest()->getInfo())->second.get_Country())==cities.end())
+                    {
+                        cities.insert(fileReader.get_Airports().find(edge.getDest()->getInfo())->second.get_Country());
+                    }
+                }
+            }
+        }
+    }
+    return ((int) cities.size());
+}
+
+int Statistics::number_of_reacheble_airports_from_airport(const string &airportCode, const FileReader &fileReader, const int number_of_stops) {
     int sol = 0;
 
     Graph graph = fileReader.get_FlightGraph();
@@ -150,19 +214,50 @@ int Statistics::number_of_reacheble_destinations_from_airport(const string &airp
     return sol;
 }
 
+pair<int, int> Statistics::max_trip_length(const FileReader &fileReader) {
+    vector<pair<string, string>> maxTrips;
+    int maxStops = 0;
 
-int Statistics::number_of_reacheble_destinations_from_city(const string &cityName, const FileReader &fileReader, int number_of_stops) {
+    for (const auto& vertex : fileReader.get_FlightGraph().getVertexSet()) {
+        std::queue<std::pair<std::string, int>> bfsQueue;
+        bfsQueue.push({vertex->getInfo(), 0});
 
-}
+        while (!bfsQueue.empty()) {
+            auto current = bfsQueue.front();
+            bfsQueue.pop();
 
-int Statistics::number_of_reacheble_destinations_from_country(const string &countryName, const FileReader &fileReader, int number_of_stops) {
-    int sol=0;
-    for(const auto& x:fileReader.get_FlightGraph().getVertexSet())
-    {
-        if(fileReader.get_Airports().find(x->getInfo())->second.get_Country()==countryName)
-        {
-            sol+=number_of_reacheble_destinations_from_airport(x->getInfo(),fileReader,number_of_stops);
+            if (current.second > maxStops) {
+                maxStops = current.second;
+                maxTrips.clear();  // Clear previous results
+                maxTrips.push_back({vertex->getInfo(), current.first});
+            } else if (current.second == maxStops) {
+                maxTrips.push_back({vertex->getInfo(), current.first});
+            }
+
+            for (const auto& edge : vertex->getAdj()) {
+                bfsQueue.push({edge.getDest()->getInfo(), current.second + 1});
+            }
         }
     }
-    return sol;
+
+    return {maxStops, (int) maxTrips.size()};
+}
+
+vector<string> Statistics::airports_with_the_most_trafic(const FileReader &fileReader, int number) {
+    vector<pair<string, int>> airports;
+
+    for (const auto& vertex : fileReader.get_FlightGraph().getVertexSet()) {
+        airports.push_back({vertex->getInfo(), (int) vertex->getAdj().size()});
+    }
+
+    sort(airports.begin(), airports.end(), [](const pair<string, int>& a, const pair<string, int>& b) {
+        return a.second > b.second;
+    });
+
+    vector<string> result;
+    for (int i = 0; i < number; ++i) {
+        result.push_back(airports[i].first);
+    }
+
+    return result;
 }
