@@ -1,11 +1,13 @@
 #include "Classes/FileReader.h"
 #include "Classes/Operations.h"
 #include "Classes/Statistics.h"
+#include "Classes/UI.h"
 
 int main() {
     auto* fileReader=new FileReader();
     fileReader->read_Data();
-    cout<<"Number of airports: 3.1 "<<Statistics::number_of_airports(*fileReader)<<endl;
+
+    /*cout<<"Number of airports: 3.1 "<<Statistics::number_of_airports(*fileReader)<<endl;
     cout<<"Number of flights: 3.1 "<<Statistics::number_of_flights(*fileReader)<<endl;
     cout<<"Number of flights from airport: 3.2 "<<Statistics::number_of_flights_from_airport("CDG",*fileReader)<<endl;
     cout<<"Number of airlines from airport: 3.2 "<<Statistics::number_of_airlines_from_airport("CDG",*fileReader)<<endl;
@@ -24,6 +26,7 @@ int main() {
     for(const auto& x:Statistics::airports_with_the_most_trafic(*fileReader,5))
     {
         cout<<x<<endl;
-    }
+    }*/
+    UI::run(*fileReader);
     return 0;
 }
