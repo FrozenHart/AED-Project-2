@@ -75,44 +75,18 @@ int Statistics::number_of_flights_from_airport_to_diferent_contrys(const string 
     return ((int) countrys.size());
 }
 
-int Statistics::nunber_of_destinations_from_airport(const string &airportCode, const FileReader &fileReader) {
-    unordered_set<string> destinations;
+int Statistics::number_of_reacheble_airports_from_airport(const string &airportCode, const FileReader &fileReader) {
+    unordered_set<string> airports;
     for(const auto& x:fileReader.get_FlightGraph().findVertex(airportCode)->getAdj())
     {
-        if(destinations.find(x.getDest()->getInfo())==destinations.end())
+        if(airports.find(x.getDest()->getInfo())==airports.end())
         {
-            destinations.insert(x.getDest()->getInfo());
+            airports.insert(x.getDest()->getInfo());
         }
     }
-    return ((int) destinations.size());
+    return ((int) airports.size());
 }
 
-int Statistics::number_of_destinations_from_city(const string &cityName, const FileReader &fileReader) {
-    unordered_set<string> destinations;
-    for (const auto &x: fileReader.get_FlightGraph().getVertexSet()) {
-        if (fileReader.get_Airports().find(x->getInfo())->second.get_City() == cityName) {
-            for (const auto &y: x->getAdj()) {
-                if (destinations.find(y.getDest()->getInfo()) == destinations.end()) {
-                    destinations.insert(y.getDest()->getInfo());
-                }
-            }
-        }
-    }
-    return ((int) destinations.size());
-}
-int Statistics::number_of_destinations_from_country(const string &countryName, const FileReader &fileReader) {
-    unordered_set<string> destinations;
-    for (const auto &x: fileReader.get_FlightGraph().getVertexSet()) {
-        if (fileReader.get_Airports().find(x->getInfo())->second.get_Country() == countryName) {
-            for (const auto &y: x->getAdj()) {
-                if (destinations.find(y.getDest()->getInfo()) == destinations.end()) {
-                    destinations.insert(y.getDest()->getInfo());
-                }
-            }
-        }
-    }
-    return ((int) destinations.size());
-}
 
 int Statistics::number_of_reacheble_contries_from_airport(const string &airportCode, const FileReader &fileReader,int number_of_stops) {
     unordered_set<string> countrys;
@@ -214,33 +188,55 @@ int Statistics::number_of_reacheble_airports_from_airport(const string &airportC
     return sol;
 }
 
-pair<int, int> Statistics::max_trip_length(const FileReader &fileReader) {
-    vector<pair<string, string>> maxTrips;
-    int maxStops = 0;
+vector<pair<string, string>> Statistics::max_trip_length(const FileReader& fileReader) {
+    vector<pair<string, string>> maxStopsPairs;
 
-    for (const auto& vertex : fileReader.get_FlightGraph().getVertexSet()) {
-        std::queue<std::pair<std::string, int>> bfsQueue;
-        bfsQueue.push({vertex->getInfo(), 0});
+    const Graph<string>& flightGraph = fileReader.get_FlightGraph();
 
-        while (!bfsQueue.empty()) {
-            auto current = bfsQueue.front();
-            bfsQueue.pop();
+    for (const auto& vertex : flightGraph.getVertexSet()) {
+        for (const auto& edge : vertex->getAdj()) {
+            const string& sourceAirport = vertex->getInfo();
+            const string& targetAirport = edge.getDest()->getInfo();
 
-            if (current.second > maxStops) {
-                maxStops = current.second;
-                maxTrips.clear();  // Clear previous results
-                maxTrips.push_back({vertex->getInfo(), current.first});
-            } else if (current.second == maxStops) {
-                maxTrips.push_back({vertex->getInfo(), current.first});
-            }
+            queue<pair<string, vector<string>>> bfsQueue;
+            bfsQueue.push({sourceAirport, {sourceAirport}});
 
-            for (const auto& edge : vertex->getAdj()) {
-                bfsQueue.push({edge.getDest()->getInfo(), current.second + 1});
+            while (!bfsQueue.empty()) {
+                string currentVertex = bfsQueue.front().first;
+                vector<string> currentPath = bfsQueue.front().second;
+                bfsQueue.pop();
+                Vertex<string>* currentVtx = flightGraph.findVertex(currentVertex);
+
+                if (currentVtx->isVisited()) {
+                    continue;
+                }
+
+                currentVtx->setVisited(true);
+
+                if (currentVertex == targetAirport) {
+                    if (currentPath.size() > maxStopsPairs.size()) {
+                        maxStopsPairs.clear();
+                        maxStopsPairs.push_back({sourceAirport, targetAirport});
+                    } else if (currentPath.size() == maxStopsPairs.size()) {
+                        maxStopsPairs.push_back({sourceAirport, targetAirport});
+                    }
+                }
+
+                for (const auto& nextEdge : currentVtx->getAdj()) {
+                    Vertex<string>* neighbor = nextEdge.getDest();
+
+                    if (!neighbor->isVisited()) {
+                        vector<string> newPath = currentPath;
+                        newPath.push_back(neighbor->getInfo());
+
+                        bfsQueue.push({neighbor->getInfo(), newPath});
+                    }
+                }
             }
         }
     }
 
-    return {maxStops, (int) maxTrips.size()};
+    return maxStopsPairs;
 }
 
 vector<string> Statistics::airports_with_the_most_trafic(const FileReader &fileReader, int number) {
@@ -261,3 +257,71 @@ vector<string> Statistics::airports_with_the_most_trafic(const FileReader &fileR
 
     return result;
 }
+
+
+void Statistics::dfsTarjanVisit(Vertex<string>& vtx, int& time, Vertex<string>* last, set<string>& res, FileReader& fileReader) {
+    int children = 0;
+    vtx.setVisited(true);
+    vtx.setLow(++time);
+    vtx.setNum(time);
+
+    for (const auto& edge : vtx.getAdj()) {
+        auto w = edge.getDest();
+        if (!w->isVisited()) {
+            children++;
+
+            dfsTarjanVisit(*w, time, &vtx, res, fileReader);
+            vtx.setLow(min(vtx.getLow(), w->getLow()));
+
+            if (last != NULL && w->getLow() >= vtx.getNum()) {
+                res.insert(vtx.getInfo());
+            }
+        } else if (w != last)
+            vtx.setLow(min(vtx.getLow(), w->getNum()));
+    }
+
+    if (last == NULL && children > 1)
+        res.insert(vtx.getInfo());
+}
+
+set<string> Statistics::essentialAirports(FileReader& fileReader) {
+    set<string> res;
+    int time = 0;
+
+    for (auto& vertex : fileReader.get_FlightGraph().getVertexSet()) {
+        vertex->setVisited(false);
+        vertex->setLow(0);
+        vertex->setNum(0);
+    }
+
+    for (auto& vertex : fileReader.get_FlightGraph().getVertexSet())
+        if (!vertex->isVisited())
+            dfsTarjanVisit(*vertex, time, nullptr, res, fileReader);
+
+    return res;
+}
+
+int Statistics::number_of_reacheble_cities_from_airport(const string &airportCode, const FileReader &fileReader) {
+    unordered_set<string> cities;
+    for(const auto& x:fileReader.get_FlightGraph().findVertex(airportCode)->getAdj())
+    {
+        if(cities.find(fileReader.get_Airports().find(x.getDest()->getInfo())->second.get_City())==cities.end())
+        {
+            cities.insert(fileReader.get_Airports().find(x.getDest()->getInfo())->second.get_City());
+        }
+    }
+    return ((int) cities.size());
+}
+
+int Statistics::number_of_reacheble_countries_from_airport(const string &airportCode, const FileReader &fileReader) {
+    unordered_set<string> countries;
+    for(const auto& x:fileReader.get_FlightGraph().findVertex(airportCode)->getAdj())
+    {
+        if(countries.find(fileReader.get_Airports().find(x.getDest()->getInfo())->second.get_Country())==countries.end())
+        {
+            countries.insert(fileReader.get_Airports().find(x.getDest()->getInfo())->second.get_Country());
+        }
+    }
+    return ((int) countries.size());
+}
+

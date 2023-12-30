@@ -6,6 +6,8 @@
 #include "FileReader.h"
 #include "Statistics.h"
 #include "Operations.h"
+#include <limits>
+#include <cstdint>
 
 class UI {
 public:
@@ -28,8 +30,11 @@ public:
     static string point15(FileReader x);
     static string point16(FileReader x);
     static string point17(FileReader x);
-    static string point18(FileReader x);
 
+private:
+    static vector<string> airport(string code, const FileReader& fileReader);
+    static bool existes_airport_from_name(string name, const FileReader& fileReader);
+    static string get_airport_code(string name, const FileReader& fileReader);
 
 };
 
