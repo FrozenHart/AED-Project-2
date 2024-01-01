@@ -1,0 +1,237 @@
+\doxysection{Statistics Class Reference}
+\hypertarget{class_statistics}{}\label{class_statistics}\index{Statistics@{Statistics}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_statistics_a55e96085b1ea7c70ebb104dba5209363}{number\+\_\+of\+\_\+airports}} (const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\item 
+static int \mbox{\hyperlink{class_statistics_ae42d3f8d7db59a0a7810d2cea7006d2d}{number\+\_\+of\+\_\+flights}} (const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\item 
+static int \mbox{\hyperlink{class_statistics_a28efebb36b9381fb365738519c0f9ffc}{number\+\_\+of\+\_\+flights\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\item 
+static int \mbox{\hyperlink{class_statistics_a79729841cd3319f963f0f84c36479faa}{number\+\_\+of\+\_\+airlines\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\item 
+static int \mbox{\hyperlink{class_statistics_a87b184d23b5bc9b46f7ace55b68814d1}{number\+\_\+of\+\_\+flights\+\_\+from\+\_\+city}} (const string \&city\+Name, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\item 
+static unordered\+\_\+map$<$ string, int $>$ \mbox{\hyperlink{class_statistics_a674069e216bfb5982fac645f1c3399d0}{number\+\_\+of\+\_\+flights\+\_\+from\+\_\+each\+\_\+airport}} (const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\item 
+static int \mbox{\hyperlink{class_statistics_a16e27a57083a6704d62003cfe93bbd6c}{number\+\_\+of\+\_\+flights\+\_\+from\+\_\+city\+\_\+to\+\_\+diferent\+\_\+contrys}} (const string \&city\+Name, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\item 
+static int \mbox{\hyperlink{class_statistics_a7f1ed25e6db66850b9adc867b9352b5a}{number\+\_\+of\+\_\+flights\+\_\+from\+\_\+airport\+\_\+to\+\_\+diferent\+\_\+contrys}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\item 
+static int \mbox{\hyperlink{class_statistics_a08ecfcd8a1ba1763c853d2997e38b3ee}{number\+\_\+of\+\_\+reacheble\+\_\+airports\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\item 
+static int \mbox{\hyperlink{class_statistics_a1961351f3da94e655de795a9c903b60a}{number\+\_\+of\+\_\+reacheble\+\_\+cities\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\item 
+static int \mbox{\hyperlink{class_statistics_ab3912723a3e91d56bfd58bfaed55641c}{number\+\_\+of\+\_\+reacheble\+\_\+countries\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\item 
+static int \mbox{\hyperlink{class_statistics_adabcd0c3188f42a59a858e07784fced0}{number\+\_\+of\+\_\+reacheble\+\_\+airports\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader, int number\+\_\+of\+\_\+stops)
+\item 
+static int \mbox{\hyperlink{class_statistics_a968bebfacceb44c85106165d103a9b29}{number\+\_\+of\+\_\+reacheble\+\_\+cities\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader, int number\+\_\+of\+\_\+stops)
+\item 
+static int \mbox{\hyperlink{class_statistics_a36ac8ce3b112b7b51de3eb028c723d5b}{number\+\_\+of\+\_\+reacheble\+\_\+contries\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader, int number\+\_\+of\+\_\+stops)
+\item 
+static vector$<$ pair$<$ string, string $>$ $>$ \mbox{\hyperlink{class_statistics_a8b1a8858f4244aaccc3ee3a8c5253016}{max\+\_\+trip\+\_\+length}} (const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\item 
+static vector$<$ string $>$ \mbox{\hyperlink{class_statistics_a3315a8b30528dfb2ad6d535fd5d1f290}{airports\+\_\+with\+\_\+the\+\_\+most\+\_\+trafic}} (const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader, int number)
+\item 
+static set$<$ string $>$ \mbox{\hyperlink{class_statistics_a1948b1bc2d8e109a0b46ac6bd9fc4a6f}{essential\+Airports}} (\mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\item 
+static tuple$<$ vector$<$ pair$<$ string, string $>$ $>$, int, int $>$ \mbox{\hyperlink{class_statistics_afd4ea9f548168e83e77670d98aba40a5}{get\+Max\+Stops}} (\mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8h_source_l00011}{11}} of file \mbox{\hyperlink{_statistics_8h_source}{Statistics.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_statistics_a3315a8b30528dfb2ad6d535fd5d1f290}\label{class_statistics_a3315a8b30528dfb2ad6d535fd5d1f290} 
+\index{Statistics@{Statistics}!airports\_with\_the\_most\_trafic@{airports\_with\_the\_most\_trafic}}
+\index{airports\_with\_the\_most\_trafic@{airports\_with\_the\_most\_trafic}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{airports\_with\_the\_most\_trafic()}{airports\_with\_the\_most\_trafic()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Statistics\+::airports\+\_\+with\+\_\+the\+\_\+most\+\_\+trafic (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader,  }\item[{int}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00242}{242}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_a1948b1bc2d8e109a0b46ac6bd9fc4a6f}\label{class_statistics_a1948b1bc2d8e109a0b46ac6bd9fc4a6f} 
+\index{Statistics@{Statistics}!essentialAirports@{essentialAirports}}
+\index{essentialAirports@{essentialAirports}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{essentialAirports()}{essentialAirports()}}
+{\footnotesize\ttfamily set$<$ string $>$ Statistics\+::essential\+Airports (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00287}{287}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_afd4ea9f548168e83e77670d98aba40a5}\label{class_statistics_afd4ea9f548168e83e77670d98aba40a5} 
+\index{Statistics@{Statistics}!getMaxStops@{getMaxStops}}
+\index{getMaxStops@{getMaxStops}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{getMaxStops()}{getMaxStops()}}
+{\footnotesize\ttfamily tuple$<$ vector$<$ pair$<$ string, string $>$ $>$, int, int $>$ Statistics\+::get\+Max\+Stops (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00328}{328}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_a8b1a8858f4244aaccc3ee3a8c5253016}\label{class_statistics_a8b1a8858f4244aaccc3ee3a8c5253016} 
+\index{Statistics@{Statistics}!max\_trip\_length@{max\_trip\_length}}
+\index{max\_trip\_length@{max\_trip\_length}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{max\_trip\_length()}{max\_trip\_length()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ string, string $>$ $>$ Statistics\+::max\+\_\+trip\+\_\+length (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00191}{191}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_a79729841cd3319f963f0f84c36479faa}\label{class_statistics_a79729841cd3319f963f0f84c36479faa} 
+\index{Statistics@{Statistics}!number\_of\_airlines\_from\_airport@{number\_of\_airlines\_from\_airport}}
+\index{number\_of\_airlines\_from\_airport@{number\_of\_airlines\_from\_airport}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{number\_of\_airlines\_from\_airport()}{number\_of\_airlines\_from\_airport()}}
+{\footnotesize\ttfamily int Statistics\+::number\+\_\+of\+\_\+airlines\+\_\+from\+\_\+airport (\begin{DoxyParamCaption}\item[{const string \&}]{airport\+Code,  }\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_a55e96085b1ea7c70ebb104dba5209363}\label{class_statistics_a55e96085b1ea7c70ebb104dba5209363} 
+\index{Statistics@{Statistics}!number\_of\_airports@{number\_of\_airports}}
+\index{number\_of\_airports@{number\_of\_airports}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{number\_of\_airports()}{number\_of\_airports()}}
+{\footnotesize\ttfamily int Statistics\+::number\+\_\+of\+\_\+airports (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_ae42d3f8d7db59a0a7810d2cea7006d2d}\label{class_statistics_ae42d3f8d7db59a0a7810d2cea7006d2d} 
+\index{Statistics@{Statistics}!number\_of\_flights@{number\_of\_flights}}
+\index{number\_of\_flights@{number\_of\_flights}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{number\_of\_flights()}{number\_of\_flights()}}
+{\footnotesize\ttfamily int Statistics\+::number\+\_\+of\+\_\+flights (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_a28efebb36b9381fb365738519c0f9ffc}\label{class_statistics_a28efebb36b9381fb365738519c0f9ffc} 
+\index{Statistics@{Statistics}!number\_of\_flights\_from\_airport@{number\_of\_flights\_from\_airport}}
+\index{number\_of\_flights\_from\_airport@{number\_of\_flights\_from\_airport}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{number\_of\_flights\_from\_airport()}{number\_of\_flights\_from\_airport()}}
+{\footnotesize\ttfamily int Statistics\+::number\+\_\+of\+\_\+flights\+\_\+from\+\_\+airport (\begin{DoxyParamCaption}\item[{const string \&}]{airport\+Code,  }\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_a7f1ed25e6db66850b9adc867b9352b5a}\label{class_statistics_a7f1ed25e6db66850b9adc867b9352b5a} 
+\index{Statistics@{Statistics}!number\_of\_flights\_from\_airport\_to\_diferent\_contrys@{number\_of\_flights\_from\_airport\_to\_diferent\_contrys}}
+\index{number\_of\_flights\_from\_airport\_to\_diferent\_contrys@{number\_of\_flights\_from\_airport\_to\_diferent\_contrys}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{number\_of\_flights\_from\_airport\_to\_diferent\_contrys()}{number\_of\_flights\_from\_airport\_to\_diferent\_contrys()}}
+{\footnotesize\ttfamily int Statistics\+::number\+\_\+of\+\_\+flights\+\_\+from\+\_\+airport\+\_\+to\+\_\+diferent\+\_\+contrys (\begin{DoxyParamCaption}\item[{const string \&}]{airport\+Code,  }\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_a87b184d23b5bc9b46f7ace55b68814d1}\label{class_statistics_a87b184d23b5bc9b46f7ace55b68814d1} 
+\index{Statistics@{Statistics}!number\_of\_flights\_from\_city@{number\_of\_flights\_from\_city}}
+\index{number\_of\_flights\_from\_city@{number\_of\_flights\_from\_city}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{number\_of\_flights\_from\_city()}{number\_of\_flights\_from\_city()}}
+{\footnotesize\ttfamily int Statistics\+::number\+\_\+of\+\_\+flights\+\_\+from\+\_\+city (\begin{DoxyParamCaption}\item[{const string \&}]{city\+Name,  }\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_a16e27a57083a6704d62003cfe93bbd6c}\label{class_statistics_a16e27a57083a6704d62003cfe93bbd6c} 
+\index{Statistics@{Statistics}!number\_of\_flights\_from\_city\_to\_diferent\_contrys@{number\_of\_flights\_from\_city\_to\_diferent\_contrys}}
+\index{number\_of\_flights\_from\_city\_to\_diferent\_contrys@{number\_of\_flights\_from\_city\_to\_diferent\_contrys}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{number\_of\_flights\_from\_city\_to\_diferent\_contrys()}{number\_of\_flights\_from\_city\_to\_diferent\_contrys()}}
+{\footnotesize\ttfamily int Statistics\+::number\+\_\+of\+\_\+flights\+\_\+from\+\_\+city\+\_\+to\+\_\+diferent\+\_\+contrys (\begin{DoxyParamCaption}\item[{const string \&}]{city\+Name,  }\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_a674069e216bfb5982fac645f1c3399d0}\label{class_statistics_a674069e216bfb5982fac645f1c3399d0} 
+\index{Statistics@{Statistics}!number\_of\_flights\_from\_each\_airport@{number\_of\_flights\_from\_each\_airport}}
+\index{number\_of\_flights\_from\_each\_airport@{number\_of\_flights\_from\_each\_airport}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{number\_of\_flights\_from\_each\_airport()}{number\_of\_flights\_from\_each\_airport()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, int $>$ Statistics\+::number\+\_\+of\+\_\+flights\+\_\+from\+\_\+each\+\_\+airport (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_a08ecfcd8a1ba1763c853d2997e38b3ee}\label{class_statistics_a08ecfcd8a1ba1763c853d2997e38b3ee} 
+\index{Statistics@{Statistics}!number\_of\_reacheble\_airports\_from\_airport@{number\_of\_reacheble\_airports\_from\_airport}}
+\index{number\_of\_reacheble\_airports\_from\_airport@{number\_of\_reacheble\_airports\_from\_airport}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{number\_of\_reacheble\_airports\_from\_airport()}{number\_of\_reacheble\_airports\_from\_airport()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Statistics\+::number\+\_\+of\+\_\+reacheble\+\_\+airports\+\_\+from\+\_\+airport (\begin{DoxyParamCaption}\item[{const string \&}]{airport\+Code,  }\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_adabcd0c3188f42a59a858e07784fced0}\label{class_statistics_adabcd0c3188f42a59a858e07784fced0} 
+\index{Statistics@{Statistics}!number\_of\_reacheble\_airports\_from\_airport@{number\_of\_reacheble\_airports\_from\_airport}}
+\index{number\_of\_reacheble\_airports\_from\_airport@{number\_of\_reacheble\_airports\_from\_airport}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{number\_of\_reacheble\_airports\_from\_airport()}{number\_of\_reacheble\_airports\_from\_airport()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Statistics\+::number\+\_\+of\+\_\+reacheble\+\_\+airports\+\_\+from\+\_\+airport (\begin{DoxyParamCaption}\item[{const string \&}]{airport\+Code,  }\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader,  }\item[{int}]{number\+\_\+of\+\_\+stops }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00159}{159}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_a1961351f3da94e655de795a9c903b60a}\label{class_statistics_a1961351f3da94e655de795a9c903b60a} 
+\index{Statistics@{Statistics}!number\_of\_reacheble\_cities\_from\_airport@{number\_of\_reacheble\_cities\_from\_airport}}
+\index{number\_of\_reacheble\_cities\_from\_airport@{number\_of\_reacheble\_cities\_from\_airport}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{number\_of\_reacheble\_cities\_from\_airport()}{number\_of\_reacheble\_cities\_from\_airport()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Statistics\+::number\+\_\+of\+\_\+reacheble\+\_\+cities\+\_\+from\+\_\+airport (\begin{DoxyParamCaption}\item[{const string \&}]{airport\+Code,  }\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00304}{304}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_a968bebfacceb44c85106165d103a9b29}\label{class_statistics_a968bebfacceb44c85106165d103a9b29} 
+\index{Statistics@{Statistics}!number\_of\_reacheble\_cities\_from\_airport@{number\_of\_reacheble\_cities\_from\_airport}}
+\index{number\_of\_reacheble\_cities\_from\_airport@{number\_of\_reacheble\_cities\_from\_airport}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{number\_of\_reacheble\_cities\_from\_airport()}{number\_of\_reacheble\_cities\_from\_airport()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Statistics\+::number\+\_\+of\+\_\+reacheble\+\_\+cities\+\_\+from\+\_\+airport (\begin{DoxyParamCaption}\item[{const string \&}]{airport\+Code,  }\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader,  }\item[{int}]{number\+\_\+of\+\_\+stops }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00125}{125}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_a36ac8ce3b112b7b51de3eb028c723d5b}\label{class_statistics_a36ac8ce3b112b7b51de3eb028c723d5b} 
+\index{Statistics@{Statistics}!number\_of\_reacheble\_contries\_from\_airport@{number\_of\_reacheble\_contries\_from\_airport}}
+\index{number\_of\_reacheble\_contries\_from\_airport@{number\_of\_reacheble\_contries\_from\_airport}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{number\_of\_reacheble\_contries\_from\_airport()}{number\_of\_reacheble\_contries\_from\_airport()}}
+{\footnotesize\ttfamily int Statistics\+::number\+\_\+of\+\_\+reacheble\+\_\+contries\+\_\+from\+\_\+airport (\begin{DoxyParamCaption}\item[{const string \&}]{airport\+Code,  }\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader,  }\item[{int}]{number\+\_\+of\+\_\+stops }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+\Hypertarget{class_statistics_ab3912723a3e91d56bfd58bfaed55641c}\label{class_statistics_ab3912723a3e91d56bfd58bfaed55641c} 
+\index{Statistics@{Statistics}!number\_of\_reacheble\_countries\_from\_airport@{number\_of\_reacheble\_countries\_from\_airport}}
+\index{number\_of\_reacheble\_countries\_from\_airport@{number\_of\_reacheble\_countries\_from\_airport}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{number\_of\_reacheble\_countries\_from\_airport()}{number\_of\_reacheble\_countries\_from\_airport()}}
+{\footnotesize\ttfamily int Statistics\+::number\+\_\+of\+\_\+reacheble\+\_\+countries\+\_\+from\+\_\+airport (\begin{DoxyParamCaption}\item[{const string \&}]{airport\+Code,  }\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00316}{316}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Classes/Statistics.\+h\item 
+Classes/Statistics.\+cpp\end{DoxyCompactItemize}

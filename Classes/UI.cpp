@@ -44,7 +44,7 @@ void UI::run(FileReader x) {
                 cout << point11(x);
                 break;
             case 12:
-                cout << "Not Implemented Yet \n";
+                cout << point12(x);
                 break;
             case 13:
                 cout << point13(x);
@@ -126,12 +126,7 @@ string UI::point1(FileReader x) {//3.1
     return ss;
 }
 
-/**
- * @brief Método para obter informações sobre um ou mais aeroportos.
- * @param code Código, nome da cidade ou coordenadas do aeroporto.
- * @param fileReader Instância de FileReader para acessar os dados do sistema.
- * @return Vetor de strings com as informações do aeroporto correspondente.
- */
+
 
 string UI::point2(FileReader x) {//3.1
 
@@ -376,13 +371,19 @@ string UI::point11(FileReader x) { //3.6
  * @return Uma string contendo o número de destinos alcançáveis a partir do aeroporto especificado, dentro do número específico de paradas.
  */
 
-/*
+
 string UI::point12(FileReader x) { //3.7
     string ss;
     ss += " Maximum Trip Length: ";
-    ss += Statistics::max_trip_length(x); //vou assumir que aqui dá o msm erro que deu em cima por retornar um vetor
+    auto [max_trip,maxstops,numpaths]  = Statistics::getMaxStops(x);
+    ss+="\nNumber of Stops: "+to_string(maxstops);
+    ss+="\nNumber of Airports with max path: "+to_string(numpaths);
+    ss+="\n";
+    for(auto x: max_trip){
+        ss += " "+x.first+" To "+x.second+"\n";
+    }
     return ss;
-}*/
+}
 
 string UI::point13(FileReader x) { //3.8
     cout << " Number: ";

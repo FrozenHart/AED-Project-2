@@ -11,6 +11,7 @@
 #include <list>
 #include <string>
 
+
 using namespace std;
 
 template <class T> class Edge;

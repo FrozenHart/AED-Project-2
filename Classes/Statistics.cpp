@@ -325,3 +325,47 @@ int Statistics::number_of_reacheble_countries_from_airport(const string &airport
     return ((int) countries.size());
 }
 
+tuple<vector<pair<string, string>>, int, int> Statistics::getMaxStops(FileReader &fileReader) {
+    vector<pair<string, string>> maxPaths;
+    vector<pair<string, string>> Source_Destination;
+    int maxStops = 0;
+    int numPaths = 0;
+
+    for (const auto &vertice : fileReader.get_FlightGraph().getVertexSet()) {
+        unordered_set<string> visited;
+        queue<tuple<Vertex<string> *, int, vector<string>>> q;
+        q.push({vertice, 0, {vertice->getInfo()}});
+        visited.insert(vertice->getInfo());
+
+        while (!q.empty()) {
+            auto [atual, paragens, vetor] = q.front();
+            q.pop();
+
+            if (paragens > maxStops) {
+                maxStops = paragens;
+                maxPaths.clear();
+                Source_Destination.clear();
+                numPaths = 1;
+                maxPaths.emplace_back(vetor.front(), vetor.back());
+                Source_Destination.emplace_back(vetor.front(), vetor.back());
+            } else if (paragens == maxStops) {
+                // If the current path has the same length as the maximum, add it to the list
+                numPaths++;
+                maxPaths.emplace_back(vetor.front(), vetor.back());
+                Source_Destination.emplace_back(vetor.front(), vetor.back());
+            }
+
+            for (auto &voo : atual->getAdj()) {
+                Vertex<string> *destino = voo.getDest();
+                if (visited.find(destino->getInfo()) == visited.end()) {
+                    vector<string> novavolta = vetor;
+                    novavolta.push_back(destino->getInfo());
+                    q.emplace(destino, paragens + 1, novavolta);
+                    visited.insert(destino->getInfo());
+                }
+            }
+        }
+    }
+
+    return {Source_Destination, maxStops, numPaths};
+}

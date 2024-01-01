@@ -1,0 +1,196 @@
+\doxysection{Operations.\+cpp}
+\hypertarget{_operations_8cpp_source}{}\label{_operations_8cpp_source}\index{Classes/Operations.cpp@{Classes/Operations.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}Operations.h"{}}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00011}\mbox{\hyperlink{class_operations_aa0d9793d5ed47dc114e635271aee89f0}{00011}}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_operations_aa0d9793d5ed47dc114e635271aee89f0}{Operations::get\_Airport\_Coordinates}}(\textcolor{keywordtype}{float}\ latitude,\ \textcolor{keywordtype}{float}\ longitude,\mbox{\hyperlink{class_file_reader}{FileReader}}\ fileReader)\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordtype}{string}\ code;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordtype}{float}\ minDistance\ =\ numeric\_limits<float>::max();}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&airport\ :\ fileReader.\mbox{\hyperlink{class_file_reader_ab1ed8ad4e772ecbd4461ada9945882ff}{get\_Airports}}())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ airportLatitude\ =\ airport.second.get\_Latitude();}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ airportLongitude\ =\ airport.second.get\_Longitude();}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ distance\ using\ Haversine\ formula}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ deltaLatitude\ =\ airportLatitude\ -\/\ latitude;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ deltaLongitude\ =\ airportLongitude\ -\/\ longitude;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ distance\ =\ sqrt(deltaLatitude\ *\ deltaLatitude\ +\ deltaLongitude\ *\ deltaLongitude);}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (distance\ <\ minDistance)\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ minDistance\ =\ distance;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ code\ =\ airport.second.get\_Code();}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{return}\ code;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00040}\mbox{\hyperlink{class_operations_ae632b3260139796ce4ec8c173dfc83b3}{00040}}\ vector<string>\ \mbox{\hyperlink{class_operations_ae632b3260139796ce4ec8c173dfc83b3}{Operations::get\_Airport\_CityName}}(\textcolor{keywordtype}{string}\ CityName,\mbox{\hyperlink{class_file_reader}{FileReader}}\ fileReader)\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{return}\ fileReader.\mbox{\hyperlink{class_file_reader_ae3fed7f2b58c83e9e9ed983852277610}{get\_Airports\_Cities}}().at(CityName);}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00051}\mbox{\hyperlink{class_operations_a28ef0e63f4874891f9d7077ea6f1263d}{00051}}\ \mbox{\hyperlink{class_airport}{Airport}}\ \mbox{\hyperlink{class_operations_a28ef0e63f4874891f9d7077ea6f1263d}{Operations::get\_Airport\_CodeName}}(\textcolor{keywordtype}{string}\ code\_name,\mbox{\hyperlink{class_file_reader}{FileReader}}\ fileReader)\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{return}\ fileReader.\mbox{\hyperlink{class_file_reader_ab1ed8ad4e772ecbd4461ada9945882ff}{get\_Airports}}().at(code\_name);}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00065}\mbox{\hyperlink{class_operations_a8c92bad4521e7703b05355acbbc2e941}{00065}}\ vector<string>\ \mbox{\hyperlink{class_operations_aa89f61df5fe7997510598f83a29c5539}{Operations::Find\_path\_RAirports}}(\textcolor{keywordtype}{string}\ source,\ \textcolor{keywordtype}{string}\ destination,\ \mbox{\hyperlink{class_file_reader}{FileReader}}\ fileReader,\ vector<string>\ skipAirports,\ vector<string>\ allowedWeights)\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00066}00066\ \ \ \ \ vector<string>\ path;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{if}\ (find(skipAirports.begin(),\ skipAirports.end(),\ source)\ !=\ skipAirports.end()\ ||}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ find(skipAirports.begin(),\ skipAirports.end(),\ destination)\ !=\ skipAirports.end())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Source\ or\ destination\ is\ in\ skipAirports."{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ path;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00074}00074\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph<string>}}\ flightGraph\ =\ fileReader.\mbox{\hyperlink{class_file_reader_a397aa73148c7feb50fa832ea7e61f1c8}{get\_FlightGraph}}();}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ x:flightGraph.getVertexSet())}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00078}00078\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ x-\/>setVisited(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ x-\/>setProcessing(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00083}00083\ \ \ \ \ queue<pair<string,\ vector<string>>>\ bfsQueue;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00085}00085\ \ \ \ \ bfsQueue.push(\{source,\ \{source\}\});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{while}\ (!bfsQueue.empty())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ currentVertex\ =\ bfsQueue.front().first;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ vector<string>\ currentPath\ =\ bfsQueue.front().second;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ bfsQueue.pop();}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex<string>}}\ *currentVtx\ =\ flightGraph.findVertex(currentVertex);}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentVtx-\/>isVisited())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ currentVtx-\/>setVisited(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentVertex\ ==\ destination)\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentPath;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ edge\ :\ currentVtx-\/>getAdj())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex<string>}}\ *neighbor\ =\ edge.getDest();}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ edgeWeight\ =\ edge.getWeight();}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ weight\ is\ allowed}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (find(allowedWeights.begin(),\ allowedWeights.end(),\ edgeWeight)\ !=\ allowedWeights.end()\ \&\&}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ !neighbor-\/>isVisited()\ \&\&}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find(skipAirports.begin(),\ skipAirports.end(),\ neighbor-\/>getInfo())\ ==\ skipAirports.end())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Mark\ the\ neighbor\ as\ processing}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ neighbor-\/>setProcessing(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vector<string>\ newPath\ =\ currentPath;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newPath.push\_back(neighbor-\/>getInfo());}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bfsQueue.push(\{neighbor-\/>getInfo(),\ newPath\});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00122}00122\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00124}00124\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}No\ path\ found."{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00125}00125\ \ \ \ \ \textcolor{keywordflow}{return}\ path;\ \ \textcolor{comment}{//\ Empty\ path}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00126}00126\ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00137}\mbox{\hyperlink{class_operations_aa89f61df5fe7997510598f83a29c5539}{00137}}\ vector<string>\ \mbox{\hyperlink{class_operations_aa89f61df5fe7997510598f83a29c5539}{Operations::Find\_path\_RAirports}}(\textcolor{keywordtype}{string}\ source,\ \textcolor{keywordtype}{string}\ destination,\ \mbox{\hyperlink{class_file_reader}{FileReader}}\ fileReader,\ vector<string>\ skipAirports)\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00138}00138\ \ \ \ \ vector<string>\ path;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00140}00140\ \ \ \ \ \textcolor{keywordflow}{if}\ (find(skipAirports.begin(),\ skipAirports.end(),\ source)\ !=\ skipAirports.end()\ ||}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ find(skipAirports.begin(),\ skipAirports.end(),\ destination)\ !=\ skipAirports.end())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ path;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00143}00143\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00144}00144\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph<string>}}\ flightGraph\ =\ fileReader.\mbox{\hyperlink{class_file_reader_a397aa73148c7feb50fa832ea7e61f1c8}{get\_FlightGraph}}();}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00146}00146\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ x:flightGraph.getVertexSet())}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00147}00147\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ x-\/>setVisited(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ x-\/>setProcessing(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00150}00150\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00152}00152\ \ \ \ \ queue<pair<string,\ vector<string>>>\ bfsQueue;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00153}00153\ \ \ \ \ bfsQueue.push(\{source,\ \{source\}\});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00154}00154\ \ \ \ \ \textcolor{keywordflow}{while}\ (!bfsQueue.empty())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ currentVertex\ =\ bfsQueue.front().first;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ vector<string>\ currentPath\ =\ bfsQueue.front().second;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ bfsQueue.pop();}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex<string>}}*\ currentVtx\ =\ flightGraph.findVertex(currentVertex);}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentVtx-\/>isVisited())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00162}00162\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00163}00163\ \ \ \ \ \ \ \ \ currentVtx-\/>setVisited(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentVertex\ ==\ destination)\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentPath;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ edge\ :\ currentVtx-\/>getAdj())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex<string>}}\ *neighbor\ =\ edge.getDest();}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!neighbor-\/>isVisited()\ \&\&}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find(skipAirports.begin(),\ skipAirports.end(),\ neighbor-\/>getInfo())\ ==\ skipAirports.end())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ neighbor-\/>setProcessing(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vector<string>\ newPath\ =\ currentPath;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newPath.push\_back(neighbor-\/>getInfo());}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bfsQueue.push(\{neighbor-\/>getInfo(),\ newPath\});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00178}00178\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00179}00179\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00181}00181\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}No\ path\ found."{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00182}00182\ \ \ \ \ \textcolor{keywordflow}{return}\ path;\ \ \textcolor{comment}{//\ Empty\ path}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00183}00183\ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00193}\mbox{\hyperlink{class_operations_a24c44968618d72e49b05bda30099b6ef}{00193}}\ set<vector<string>>\ \mbox{\hyperlink{class_operations_a24c44968618d72e49b05bda30099b6ef}{Operations::Find\_paths\_min\_length}}(\textcolor{keywordtype}{string}\ source,\ \textcolor{keywordtype}{string}\ destination,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_file_reader}{FileReader}}\&\ fileReader)\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00194}00194\ \ \ \ \ set<vector<string>>\ allPaths;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00196}00196\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph<string>}}\ flightGraph\ =\ fileReader.\mbox{\hyperlink{class_file_reader_a397aa73148c7feb50fa832ea7e61f1c8}{get\_FlightGraph}}();}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00198}00198\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ x\ :\ flightGraph.getVertexSet())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ x-\/>setVisited(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ x-\/>setProcessing(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00201}00201\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00203}00203\ \ \ \ \ queue<pair<string,\ vector<string>>>\ bfsQueue;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00204}00204\ \ \ \ \ bfsQueue.push(\{source,\ \{source\}\});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00206}00206\ \ \ \ \ \textcolor{keywordflow}{while}\ (!bfsQueue.empty())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ currentVertex\ =\ bfsQueue.front().first;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ vector<string>\ currentPath\ =\ bfsQueue.front().second;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ bfsQueue.pop();}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex<string>}}*\ currentVtx\ =\ flightGraph.findVertex(currentVertex);}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentVtx-\/>isVisited())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ currentVtx-\/>setVisited(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentVertex\ ==\ destination)\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ allPaths.insert(currentPath);}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ edge\ :\ currentVtx-\/>getAdj())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex<string>}}*\ neighbor\ =\ edge.getDest();}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00225}00225\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!neighbor-\/>isVisited())\ \{}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ neighbor-\/>setProcessing(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vector<string>\ newPath\ =\ currentPath;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newPath.push\_back(neighbor-\/>getInfo());}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bfsQueue.push(\{neighbor-\/>getInfo(),\ newPath\});}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00234}00234\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00235}00235\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00237}00237\ \ \ \ \ \textcolor{keywordflow}{return}\ allPaths;}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00238}00238\ \}}
+\DoxyCodeLine{\Hypertarget{_operations_8cpp_source_l00239}00239\ }
+
+\end{DoxyCode}

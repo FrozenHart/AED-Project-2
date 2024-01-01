@@ -1,0 +1,58 @@
+\doxysection{File\+Reader.\+h}
+\hypertarget{_file_reader_8h_source}{}\label{_file_reader_8h_source}\index{Classes/FileReader.h@{Classes/FileReader.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ AED\_PROJECT\_2\_FILEREADER\_H}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ AED\_PROJECT\_2\_FILEREADER\_H}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}Graph.h"{}}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}Airline.h"{}}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}Airport.h"{}}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00014}00014\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00019}\mbox{\hyperlink{class_file_reader}{00019}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_file_reader}{FileReader}}\ \{}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00020}00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ Grafos\ e\ mapas\ para\ armazenar\ dados\ lidos\ dos\ arquivos}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_graph}{Graph<string>}}\ FlightGraph;}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00023}00023\ \ \ \ \ unordered\_map<string,\ Airline>\ Airlines;}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00024}00024\ \ \ \ \ unordered\_map<string,\ Airport>\ Airports;}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00025}00025\ \ \ \ \ unordered\_map<string,\ vector<string>>\ Airports\_Cities;}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00026}00026\ \ \ \ \ unordered\_map<string,\ vector<string>>\ Cities\_Countries;}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00028}00028\ \ \ \ \ \textcolor{comment}{//\ Funções\ privadas\ para\ leitura\ dos\ dados}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{void}\ read\_Flights();}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{void}\ read\_Airports();}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{void}\ read\_Airlines();}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//\ Funções\ para\ salvar\ dados\ (comentadas)}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00034}00034\ \ \ \ \ \textcolor{comment}{//\ void\ save\_Flights();}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ void\ save\_Airports();}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00036}00036\ \ \ \ \ \textcolor{comment}{//\ void\ save\_Airlines();}}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00037}00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00041}\mbox{\hyperlink{class_file_reader_a615dcb2443cad1f2ca123c7c0c334480}{00041}}\ \ \ \ \ \mbox{\hyperlink{class_file_reader_a615dcb2443cad1f2ca123c7c0c334480}{FileReader}}();}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00046}\mbox{\hyperlink{class_file_reader_a1382969e8f1468f3b04ad4b44ab39dee}{00046}}\ \ \ \ \ \mbox{\hyperlink{class_file_reader_a1382969e8f1468f3b04ad4b44ab39dee}{\string~FileReader}}();}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00051}00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_file_reader_a46001ac93582b51eec4c1e9ba02162fb}{read\_Data}}();}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00057}00057\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph<string>}}\ \mbox{\hyperlink{class_file_reader_a397aa73148c7feb50fa832ea7e61f1c8}{get\_FlightGraph}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00063}00063\ \ \ \ \ unordered\_map<string,\ Airline>\ \mbox{\hyperlink{class_file_reader_a360b0c740efe57782265ac96563110de}{get\_Airlines}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00069}00069\ \ \ \ \ unordered\_map<string,\ Airport>\ \mbox{\hyperlink{class_file_reader_ab1ed8ad4e772ecbd4461ada9945882ff}{get\_Airports}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00075}00075\ \ \ \ \ unordered\_map<string,\ vector<string>>\ \mbox{\hyperlink{class_file_reader_ae3fed7f2b58c83e9e9ed983852277610}{get\_Airports\_Cities}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00081}00081\ \ \ \ \ unordered\_map<string,\ vector<string>>\ \mbox{\hyperlink{class_file_reader_a4f46cd1567246cc4c62d2fe8a39dc416}{get\_Cities\_Countries}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00082}00082\ \};}
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_file_reader_8h_source_l00084}00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AED\_PROJECT\_2\_FILEREADER\_H}}
+
+\end{DoxyCode}

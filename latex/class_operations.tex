@@ -1,0 +1,218 @@
+\doxysection{Operations Class Reference}
+\hypertarget{class_operations}{}\label{class_operations}\index{Operations@{Operations}}
+
+
+Classe contendo operações para manipulação de dados de aeroportos e grafos.  
+
+
+
+
+{\ttfamily \#include $<$Operations.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_airport}{Airport}} \mbox{\hyperlink{class_operations_a28ef0e63f4874891f9d7077ea6f1263d}{get\+\_\+\+Airport\+\_\+\+Code\+Name}} (string code\+\_\+name, \mbox{\hyperlink{class_file_reader}{File\+Reader}} file\+Reader)
+\begin{DoxyCompactList}\small\item\em Obtém um aeroporto por código ou nome. \end{DoxyCompactList}\item 
+static vector$<$ string $>$ \mbox{\hyperlink{class_operations_ae632b3260139796ce4ec8c173dfc83b3}{get\+\_\+\+Airport\+\_\+\+City\+Name}} (string City\+Name, \mbox{\hyperlink{class_file_reader}{File\+Reader}} file\+Reader)
+\begin{DoxyCompactList}\small\item\em Obtém uma lista de códigos de aeroportos por nome da cidade. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_operations_aa0d9793d5ed47dc114e635271aee89f0}{get\+\_\+\+Airport\+\_\+\+Coordinates}} (float latitude, float longitude, \mbox{\hyperlink{class_file_reader}{File\+Reader}} file\+Reader)
+\begin{DoxyCompactList}\small\item\em Obtém as coordenadas do aeroporto mais próximo de dadas coordenadas geográficas. \end{DoxyCompactList}\item 
+static set$<$ vector$<$ string $>$ $>$ \mbox{\hyperlink{class_operations_a24c44968618d72e49b05bda30099b6ef}{Find\+\_\+paths\+\_\+min\+\_\+length}} (string source, string destination, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
+\begin{DoxyCompactList}\small\item\em Encontra todos os caminhos de menor comprimento entre dois aeroportos. \end{DoxyCompactList}\item 
+static vector$<$ string $>$ \mbox{\hyperlink{class_operations_aa89f61df5fe7997510598f83a29c5539}{Find\+\_\+path\+\_\+\+RAirports}} (string source, string destination, \mbox{\hyperlink{class_file_reader}{File\+Reader}} file\+Reader, vector$<$ string $>$ skip\+Airports)
+\begin{DoxyCompactList}\small\item\em Encontra um caminho de roteamento entre dois aeroportos, evitando certos aeroportos. \end{DoxyCompactList}\item 
+static vector$<$ string $>$ \mbox{\hyperlink{class_operations_a8c92bad4521e7703b05355acbbc2e941}{Find\+\_\+path\+\_\+\+RAirports}} (string source, string destination, \mbox{\hyperlink{class_file_reader}{File\+Reader}} file\+Reader, vector$<$ string $>$ skip\+Airports, vector$<$ string $>$ allowed\+Weights)
+\begin{DoxyCompactList}\small\item\em Encontra um caminho de roteamento entre dois aeroportos, evitando certos aeroportos e pesos específicos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe contendo operações para manipulação de dados de aeroportos e grafos. 
+
+Definition at line \mbox{\hyperlink{_operations_8h_source_l00014}{14}} of file \mbox{\hyperlink{_operations_8h_source}{Operations.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_operations_aa89f61df5fe7997510598f83a29c5539}\label{class_operations_aa89f61df5fe7997510598f83a29c5539} 
+\index{Operations@{Operations}!Find\_path\_RAirports@{Find\_path\_RAirports}}
+\index{Find\_path\_RAirports@{Find\_path\_RAirports}!Operations@{Operations}}
+\doxysubsubsection{\texorpdfstring{Find\_path\_RAirports()}{Find\_path\_RAirports()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily vector$<$ string $>$ Operations\+::\+Find\+\_\+path\+\_\+\+RAirports (\begin{DoxyParamCaption}\item[{string}]{source,  }\item[{string}]{destination,  }\item[{\mbox{\hyperlink{class_file_reader}{File\+Reader}}}]{file\+Reader,  }\item[{vector$<$ string $>$}]{skip\+Airports }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Encontra um caminho de roteamento entre dois aeroportos, evitando certos aeroportos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Aeroporto de partida. \\
+\hline
+{\em destination} & Aeroporto de destino. \\
+\hline
+{\em file\+Reader} & Instância de \doxylink{class_file_reader}{File\+Reader} para acessar os dados. \\
+\hline
+{\em skip\+Airports} & Lista de aeroportos a serem evitados no caminho. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O caminho de roteamento entre os aeroportos, evitando os aeroportos específicos. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_operations_8cpp_source_l00137}{137}} of file \mbox{\hyperlink{_operations_8cpp_source}{Operations.\+cpp}}.
+
+\Hypertarget{class_operations_a8c92bad4521e7703b05355acbbc2e941}\label{class_operations_a8c92bad4521e7703b05355acbbc2e941} 
+\index{Operations@{Operations}!Find\_path\_RAirports@{Find\_path\_RAirports}}
+\index{Find\_path\_RAirports@{Find\_path\_RAirports}!Operations@{Operations}}
+\doxysubsubsection{\texorpdfstring{Find\_path\_RAirports()}{Find\_path\_RAirports()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily vector$<$ string $>$ Operations\+::\+Find\+\_\+path\+\_\+\+RAirports (\begin{DoxyParamCaption}\item[{string}]{source,  }\item[{string}]{destination,  }\item[{\mbox{\hyperlink{class_file_reader}{File\+Reader}}}]{file\+Reader,  }\item[{vector$<$ string $>$}]{skip\+Airports,  }\item[{vector$<$ string $>$}]{allowed\+Weights }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Encontra um caminho de roteamento entre dois aeroportos, evitando certos aeroportos e pesos específicos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Aeroporto de partida. \\
+\hline
+{\em destination} & Aeroporto de destino. \\
+\hline
+{\em file\+Reader} & Instância de \doxylink{class_file_reader}{File\+Reader} para acessar os dados. \\
+\hline
+{\em skip\+Airports} & Lista de aeroportos a serem evitados no caminho. \\
+\hline
+{\em allowed\+Weights} & Lista de pesos permitidos no caminho. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O caminho de roteamento entre os aeroportos, evitando aeroportos e pesos específicos. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_operations_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{_operations_8cpp_source}{Operations.\+cpp}}.
+
+\Hypertarget{class_operations_a24c44968618d72e49b05bda30099b6ef}\label{class_operations_a24c44968618d72e49b05bda30099b6ef} 
+\index{Operations@{Operations}!Find\_paths\_min\_length@{Find\_paths\_min\_length}}
+\index{Find\_paths\_min\_length@{Find\_paths\_min\_length}!Operations@{Operations}}
+\doxysubsubsection{\texorpdfstring{Find\_paths\_min\_length()}{Find\_paths\_min\_length()}}
+{\footnotesize\ttfamily set$<$ vector$<$ string $>$ $>$ Operations\+::\+Find\+\_\+paths\+\_\+min\+\_\+length (\begin{DoxyParamCaption}\item[{string}]{source,  }\item[{string}]{destination,  }\item[{const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Encontra todos os caminhos de menor comprimento entre dois aeroportos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Aeroporto de partida. \\
+\hline
+{\em destination} & Aeroporto de destino. \\
+\hline
+{\em file\+Reader} & Instância de \doxylink{class_file_reader}{File\+Reader} para acessar os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Conjunto de caminhos de menor comprimento entre os aeroportos. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_operations_8cpp_source_l00193}{193}} of file \mbox{\hyperlink{_operations_8cpp_source}{Operations.\+cpp}}.
+
+\Hypertarget{class_operations_ae632b3260139796ce4ec8c173dfc83b3}\label{class_operations_ae632b3260139796ce4ec8c173dfc83b3} 
+\index{Operations@{Operations}!get\_Airport\_CityName@{get\_Airport\_CityName}}
+\index{get\_Airport\_CityName@{get\_Airport\_CityName}!Operations@{Operations}}
+\doxysubsubsection{\texorpdfstring{get\_Airport\_CityName()}{get\_Airport\_CityName()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Operations\+::get\+\_\+\+Airport\+\_\+\+City\+Name (\begin{DoxyParamCaption}\item[{string}]{City\+Name,  }\item[{\mbox{\hyperlink{class_file_reader}{File\+Reader}}}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtém uma lista de códigos de aeroportos por nome da cidade. 
+
+Obtém uma lista de códigos de aeroportos com base no nome de uma cidade.
+
+
+\begin{DoxyParams}{Parameters}
+{\em City\+Name} & Nome da cidade para buscar aeroportos. \\
+\hline
+{\em file\+Reader} & Instância de \doxylink{class_file_reader}{File\+Reader} para acessar os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista de códigos de aeroportos na cidade especificada. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_operations_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{_operations_8cpp_source}{Operations.\+cpp}}.
+
+\Hypertarget{class_operations_a28ef0e63f4874891f9d7077ea6f1263d}\label{class_operations_a28ef0e63f4874891f9d7077ea6f1263d} 
+\index{Operations@{Operations}!get\_Airport\_CodeName@{get\_Airport\_CodeName}}
+\index{get\_Airport\_CodeName@{get\_Airport\_CodeName}!Operations@{Operations}}
+\doxysubsubsection{\texorpdfstring{get\_Airport\_CodeName()}{get\_Airport\_CodeName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_airport}{Airport}} Operations\+::get\+\_\+\+Airport\+\_\+\+Code\+Name (\begin{DoxyParamCaption}\item[{string}]{code\+\_\+name,  }\item[{\mbox{\hyperlink{class_file_reader}{File\+Reader}}}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtém um aeroporto por código ou nome. 
+
+Obtém um aeroporto pelo código ou nome.
+
+
+\begin{DoxyParams}{Parameters}
+{\em code\+\_\+name} & Código ou nome do aeroporto a ser procurado. \\
+\hline
+{\em file\+Reader} & Instância de \doxylink{class_file_reader}{File\+Reader} para acessar os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O aeroporto correspondente ao código ou nome. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_operations_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{_operations_8cpp_source}{Operations.\+cpp}}.
+
+\Hypertarget{class_operations_aa0d9793d5ed47dc114e635271aee89f0}\label{class_operations_aa0d9793d5ed47dc114e635271aee89f0} 
+\index{Operations@{Operations}!get\_Airport\_Coordinates@{get\_Airport\_Coordinates}}
+\index{get\_Airport\_Coordinates@{get\_Airport\_Coordinates}!Operations@{Operations}}
+\doxysubsubsection{\texorpdfstring{get\_Airport\_Coordinates()}{get\_Airport\_Coordinates()}}
+{\footnotesize\ttfamily string Operations\+::get\+\_\+\+Airport\+\_\+\+Coordinates (\begin{DoxyParamCaption}\item[{float}]{latitude,  }\item[{float}]{longitude,  }\item[{\mbox{\hyperlink{class_file_reader}{File\+Reader}}}]{file\+Reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtém as coordenadas do aeroporto mais próximo de dadas coordenadas geográficas. 
+
+Obtém as coordenadas do aeroporto mais próximo de um conjunto de coordenadas geográficas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em latitude} & Latitude da localização. \\
+\hline
+{\em longitude} & Longitude da localização. \\
+\hline
+{\em file\+Reader} & Instância de \doxylink{class_file_reader}{File\+Reader} para acessar os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+As coordenadas do aeroporto mais próximo.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em latitude} & Latitude da localização. \\
+\hline
+{\em longitude} & Longitude da localização. \\
+\hline
+{\em file\+Reader} & Instância de \doxylink{class_file_reader}{File\+Reader} para acessar os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O código do aeroporto mais próximo das coordenadas fornecidas. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_operations_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_operations_8cpp_source}{Operations.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Classes/Operations.\+h\item 
+Classes/Operations.\+cpp\end{DoxyCompactItemize}

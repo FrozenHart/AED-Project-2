@@ -1,0 +1,176 @@
+\doxysection{File\+Reader Class Reference}
+\hypertarget{class_file_reader}{}\label{class_file_reader}\index{FileReader@{FileReader}}
+
+
+Classe responsável pela leitura de dados de arquivos.  
+
+
+
+
+{\ttfamily \#include $<$File\+Reader.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_file_reader_a615dcb2443cad1f2ca123c7c0c334480}{File\+Reader}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_file_reader}{File\+Reader}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_file_reader_a1382969e8f1468f3b04ad4b44ab39dee}{\texorpdfstring{$\sim$}{\string~}\+File\+Reader}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_file_reader}{File\+Reader}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_file_reader_a46001ac93582b51eec4c1e9ba02162fb}{read\+\_\+\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Função para ler os dados dos arquivos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graph}{Graph}}$<$ string $>$ \mbox{\hyperlink{class_file_reader_a397aa73148c7feb50fa832ea7e61f1c8}{get\+\_\+\+Flight\+Graph}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o grafo de voos. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airline}{Airline}} $>$ \mbox{\hyperlink{class_file_reader_a360b0c740efe57782265ac96563110de}{get\+\_\+\+Airlines}} () const
+\begin{DoxyCompactList}\small\item\em Obtém as companhias aéreas. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airport}{Airport}} $>$ \mbox{\hyperlink{class_file_reader_ab1ed8ad4e772ecbd4461ada9945882ff}{get\+\_\+\+Airports}} () const
+\begin{DoxyCompactList}\small\item\em Obtém os aeroportos. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ string, vector$<$ string $>$ $>$ \mbox{\hyperlink{class_file_reader_ae3fed7f2b58c83e9e9ed983852277610}{get\+\_\+\+Airports\+\_\+\+Cities}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a relação entre aeroportos e cidades. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ string, vector$<$ string $>$ $>$ \mbox{\hyperlink{class_file_reader_a4f46cd1567246cc4c62d2fe8a39dc416}{get\+\_\+\+Cities\+\_\+\+Countries}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a relação entre cidades e países. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe responsável pela leitura de dados de arquivos. 
+
+Definition at line \mbox{\hyperlink{_file_reader_8h_source_l00019}{19}} of file \mbox{\hyperlink{_file_reader_8h_source}{File\+Reader.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_file_reader_a615dcb2443cad1f2ca123c7c0c334480}\label{class_file_reader_a615dcb2443cad1f2ca123c7c0c334480} 
+\index{FileReader@{FileReader}!FileReader@{FileReader}}
+\index{FileReader@{FileReader}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{FileReader()}{FileReader()}}
+{\footnotesize\ttfamily File\+Reader\+::\+File\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construtor da classe \doxylink{class_file_reader}{File\+Reader}. 
+
+Construtor padrão da classe \doxylink{class_file_reader}{File\+Reader}. \Hypertarget{class_file_reader_a1382969e8f1468f3b04ad4b44ab39dee}\label{class_file_reader_a1382969e8f1468f3b04ad4b44ab39dee} 
+\index{FileReader@{FileReader}!````~FileReader@{\texorpdfstring{$\sim$}{\string~}FileReader}}
+\index{````~FileReader@{\texorpdfstring{$\sim$}{\string~}FileReader}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}FileReader()}{\string~FileReader()}}
+{\footnotesize\ttfamily File\+Reader\+::\texorpdfstring{$\sim$}{\string~}\+File\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destrutor da classe \doxylink{class_file_reader}{File\+Reader}. 
+
+Destrutor padrão da classe \doxylink{class_file_reader}{File\+Reader}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_file_reader_a360b0c740efe57782265ac96563110de}\label{class_file_reader_a360b0c740efe57782265ac96563110de} 
+\index{FileReader@{FileReader}!get\_Airlines@{get\_Airlines}}
+\index{get\_Airlines@{get\_Airlines}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{get\_Airlines()}{get\_Airlines()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airline}{Airline}} $>$ File\+Reader\+::get\+\_\+\+Airlines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém as companhias aéreas. 
+
+Obtém o mapa de companhias aéreas.
+
+\begin{DoxyReturn}{Returns}
+Mapa de companhias aéreas 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_file_reader_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{_file_reader_8cpp_source}{File\+Reader.\+cpp}}.
+
+\Hypertarget{class_file_reader_ab1ed8ad4e772ecbd4461ada9945882ff}\label{class_file_reader_ab1ed8ad4e772ecbd4461ada9945882ff} 
+\index{FileReader@{FileReader}!get\_Airports@{get\_Airports}}
+\index{get\_Airports@{get\_Airports}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{get\_Airports()}{get\_Airports()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airport}{Airport}} $>$ File\+Reader\+::get\+\_\+\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém os aeroportos. 
+
+Obtém o mapa de aeroportos.
+
+\begin{DoxyReturn}{Returns}
+Mapa de aeroportos 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_file_reader_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{_file_reader_8cpp_source}{File\+Reader.\+cpp}}.
+
+\Hypertarget{class_file_reader_ae3fed7f2b58c83e9e9ed983852277610}\label{class_file_reader_ae3fed7f2b58c83e9e9ed983852277610} 
+\index{FileReader@{FileReader}!get\_Airports\_Cities@{get\_Airports\_Cities}}
+\index{get\_Airports\_Cities@{get\_Airports\_Cities}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{get\_Airports\_Cities()}{get\_Airports\_Cities()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, vector$<$ string $>$ $>$ File\+Reader\+::get\+\_\+\+Airports\+\_\+\+Cities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém a relação entre aeroportos e cidades. 
+
+Obtém o mapa de aeroportos e cidades.
+
+\begin{DoxyReturn}{Returns}
+Mapa de aeroportos e cidades 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_file_reader_8cpp_source_l00077}{77}} of file \mbox{\hyperlink{_file_reader_8cpp_source}{File\+Reader.\+cpp}}.
+
+\Hypertarget{class_file_reader_a4f46cd1567246cc4c62d2fe8a39dc416}\label{class_file_reader_a4f46cd1567246cc4c62d2fe8a39dc416} 
+\index{FileReader@{FileReader}!get\_Cities\_Countries@{get\_Cities\_Countries}}
+\index{get\_Cities\_Countries@{get\_Cities\_Countries}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{get\_Cities\_Countries()}{get\_Cities\_Countries()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, vector$<$ string $>$ $>$ File\+Reader\+::get\+\_\+\+Cities\+\_\+\+Countries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém a relação entre cidades e países. 
+
+Obtém o mapa de cidades e países.
+
+\begin{DoxyReturn}{Returns}
+Mapa de cidades e países 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_file_reader_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{_file_reader_8cpp_source}{File\+Reader.\+cpp}}.
+
+\Hypertarget{class_file_reader_a397aa73148c7feb50fa832ea7e61f1c8}\label{class_file_reader_a397aa73148c7feb50fa832ea7e61f1c8} 
+\index{FileReader@{FileReader}!get\_FlightGraph@{get\_FlightGraph}}
+\index{get\_FlightGraph@{get\_FlightGraph}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{get\_FlightGraph()}{get\_FlightGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}}$<$ string $>$ File\+Reader\+::get\+\_\+\+Flight\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém o grafo de voos. 
+
+\begin{DoxyReturn}{Returns}
+Grafo de voos 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_file_reader_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{_file_reader_8cpp_source}{File\+Reader.\+cpp}}.
+
+\Hypertarget{class_file_reader_a46001ac93582b51eec4c1e9ba02162fb}\label{class_file_reader_a46001ac93582b51eec4c1e9ba02162fb} 
+\index{FileReader@{FileReader}!read\_Data@{read\_Data}}
+\index{read\_Data@{read\_Data}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{read\_Data()}{read\_Data()}}
+{\footnotesize\ttfamily void File\+Reader\+::read\+\_\+\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função para ler os dados dos arquivos. 
+
+Lê os dados dos arquivos de aeroportos, companhias aéreas e voos. 
+
+Definition at line \mbox{\hyperlink{_file_reader_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_file_reader_8cpp_source}{File\+Reader.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Classes/File\+Reader.\+h\item 
+Classes/File\+Reader.\+cpp\end{DoxyCompactItemize}

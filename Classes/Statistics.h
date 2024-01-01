@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <set>
 #include <tuple>
+#define MaxTripVector std::vector<std::pair<Airport, Airport>>
 
 class Statistics {
 public:
@@ -26,9 +27,9 @@ public:
     static vector<pair<string, string>> max_trip_length(const FileReader& fileReader); //3.7
     static vector<string> airports_with_the_most_trafic(const FileReader& fileReader,int number); //3.8
     static set<string> essentialAirports(FileReader &fileReader); //3.9
+    static tuple<vector<pair<string, string>>, int,int> getMaxStops(FileReader &fileReader); //3.10
 private:
     static void dfsTarjanVisit(Vertex<string> &vtx, int &time, Vertex<string> *last, set<string> &res, FileReader &fileReader);
-
 };
 
 
