@@ -75,49 +75,73 @@ $(function() {
   <div class="headertitle"><div class="title">Statistics Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe responsável por calcular estatísticas com base nos dados do <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>.  
+ <a href="class_statistics.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_statistics_8h_source.html">Statistics.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a55e96085b1ea7c70ebb104dba5209363" id="r_a55e96085b1ea7c70ebb104dba5209363"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a55e96085b1ea7c70ebb104dba5209363">number_of_airports</a> (const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader)</td></tr>
+<tr class="memdesc:a55e96085b1ea7c70ebb104dba5209363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o número total de aeroportos nos dados.  <br /></td></tr>
 <tr class="separator:a55e96085b1ea7c70ebb104dba5209363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae42d3f8d7db59a0a7810d2cea7006d2d" id="r_ae42d3f8d7db59a0a7810d2cea7006d2d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#ae42d3f8d7db59a0a7810d2cea7006d2d">number_of_flights</a> (const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader)</td></tr>
+<tr class="memdesc:ae42d3f8d7db59a0a7810d2cea7006d2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o número total de voos nos dados.  <br /></td></tr>
 <tr class="separator:ae42d3f8d7db59a0a7810d2cea7006d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28efebb36b9381fb365738519c0f9ffc" id="r_a28efebb36b9381fb365738519c0f9ffc"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a28efebb36b9381fb365738519c0f9ffc">number_of_flights_from_airport</a> (const string &amp;airportCode, const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader)</td></tr>
+<tr class="memdesc:a28efebb36b9381fb365738519c0f9ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o número de voos partindo de um aeroporto específico.  <br /></td></tr>
 <tr class="separator:a28efebb36b9381fb365738519c0f9ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79729841cd3319f963f0f84c36479faa" id="r_a79729841cd3319f963f0f84c36479faa"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a79729841cd3319f963f0f84c36479faa">number_of_airlines_from_airport</a> (const string &amp;airportCode, const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader)</td></tr>
+<tr class="memdesc:a79729841cd3319f963f0f84c36479faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o número de companhias aéreas operando em um aeroporto específico.  <br /></td></tr>
 <tr class="separator:a79729841cd3319f963f0f84c36479faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87b184d23b5bc9b46f7ace55b68814d1" id="r_a87b184d23b5bc9b46f7ace55b68814d1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a87b184d23b5bc9b46f7ace55b68814d1">number_of_flights_from_city</a> (const string &amp;cityName, const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader)</td></tr>
+<tr class="memdesc:a87b184d23b5bc9b46f7ace55b68814d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o número de voos partindo de uma cidade específica.  <br /></td></tr>
 <tr class="separator:a87b184d23b5bc9b46f7ace55b68814d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a674069e216bfb5982fac645f1c3399d0" id="r_a674069e216bfb5982fac645f1c3399d0"><td class="memItemLeft" align="right" valign="top">static unordered_map&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a674069e216bfb5982fac645f1c3399d0">number_of_flights_from_each_airport</a> (const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader)</td></tr>
+<tr class="memdesc:a674069e216bfb5982fac645f1c3399d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o número de voos partindo de cada aeroporto.  <br /></td></tr>
 <tr class="separator:a674069e216bfb5982fac645f1c3399d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16e27a57083a6704d62003cfe93bbd6c" id="r_a16e27a57083a6704d62003cfe93bbd6c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a16e27a57083a6704d62003cfe93bbd6c">number_of_flights_from_city_to_diferent_contrys</a> (const string &amp;cityName, const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader)</td></tr>
+<tr class="memdesc:a16e27a57083a6704d62003cfe93bbd6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o número de voos partindo de uma cidade para diferentes países.  <br /></td></tr>
 <tr class="separator:a16e27a57083a6704d62003cfe93bbd6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f1ed25e6db66850b9adc867b9352b5a" id="r_a7f1ed25e6db66850b9adc867b9352b5a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a7f1ed25e6db66850b9adc867b9352b5a">number_of_flights_from_airport_to_diferent_contrys</a> (const string &amp;airportCode, const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader)</td></tr>
+<tr class="memdesc:a7f1ed25e6db66850b9adc867b9352b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o número de voos partindo de um aeroporto para diferentes países.  <br /></td></tr>
 <tr class="separator:a7f1ed25e6db66850b9adc867b9352b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08ecfcd8a1ba1763c853d2997e38b3ee" id="r_a08ecfcd8a1ba1763c853d2997e38b3ee"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a08ecfcd8a1ba1763c853d2997e38b3ee">number_of_reacheble_airports_from_airport</a> (const string &amp;airportCode, const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader)</td></tr>
+<tr class="memdesc:a08ecfcd8a1ba1763c853d2997e38b3ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o número de aeroportos alcançáveis a partir de um aeroporto.  <br /></td></tr>
 <tr class="separator:a08ecfcd8a1ba1763c853d2997e38b3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1961351f3da94e655de795a9c903b60a" id="r_a1961351f3da94e655de795a9c903b60a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a1961351f3da94e655de795a9c903b60a">number_of_reacheble_cities_from_airport</a> (const string &amp;airportCode, const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader)</td></tr>
+<tr class="memdesc:a1961351f3da94e655de795a9c903b60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o número de cidades alcançáveis a partir de um aeroporto.  <br /></td></tr>
 <tr class="separator:a1961351f3da94e655de795a9c903b60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3912723a3e91d56bfd58bfaed55641c" id="r_ab3912723a3e91d56bfd58bfaed55641c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#ab3912723a3e91d56bfd58bfaed55641c">number_of_reacheble_countries_from_airport</a> (const string &amp;airportCode, const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader)</td></tr>
+<tr class="memdesc:ab3912723a3e91d56bfd58bfaed55641c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o número de países alcançáveis a partir de um aeroporto.  <br /></td></tr>
 <tr class="separator:ab3912723a3e91d56bfd58bfaed55641c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adabcd0c3188f42a59a858e07784fced0" id="r_adabcd0c3188f42a59a858e07784fced0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#adabcd0c3188f42a59a858e07784fced0">number_of_reacheble_airports_from_airport</a> (const string &amp;airportCode, const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader, int number_of_stops)</td></tr>
+<tr class="memdesc:adabcd0c3188f42a59a858e07784fced0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o número de aeroportos alcançáveis a partir de um aeroporto com um número específico de paradas.  <br /></td></tr>
 <tr class="separator:adabcd0c3188f42a59a858e07784fced0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a968bebfacceb44c85106165d103a9b29" id="r_a968bebfacceb44c85106165d103a9b29"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a968bebfacceb44c85106165d103a9b29">number_of_reacheble_cities_from_airport</a> (const string &amp;airportCode, const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader, int number_of_stops)</td></tr>
+<tr class="memdesc:a968bebfacceb44c85106165d103a9b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o número de cidades alcançáveis a partir de um aeroporto com um número específico de paradas.  <br /></td></tr>
 <tr class="separator:a968bebfacceb44c85106165d103a9b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36ac8ce3b112b7b51de3eb028c723d5b" id="r_a36ac8ce3b112b7b51de3eb028c723d5b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a36ac8ce3b112b7b51de3eb028c723d5b">number_of_reacheble_contries_from_airport</a> (const string &amp;airportCode, const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader, int number_of_stops)</td></tr>
+<tr class="memdesc:a36ac8ce3b112b7b51de3eb028c723d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o número de países alcançáveis a partir de um aeroporto com um número específico de paradas.  <br /></td></tr>
 <tr class="separator:a36ac8ce3b112b7b51de3eb028c723d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b1a8858f4244aaccc3ee3a8c5253016" id="r_a8b1a8858f4244aaccc3ee3a8c5253016"><td class="memItemLeft" align="right" valign="top">static vector&lt; pair&lt; string, string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a8b1a8858f4244aaccc3ee3a8c5253016">max_trip_length</a> (const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader)</td></tr>
+<tr class="memdesc:a8b1a8858f4244aaccc3ee3a8c5253016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encontra o caminho de viagem mais longo entre dois aeroportos.  <br /></td></tr>
 <tr class="separator:a8b1a8858f4244aaccc3ee3a8c5253016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3315a8b30528dfb2ad6d535fd5d1f290" id="r_a3315a8b30528dfb2ad6d535fd5d1f290"><td class="memItemLeft" align="right" valign="top">static vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a3315a8b30528dfb2ad6d535fd5d1f290">airports_with_the_most_trafic</a> (const <a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader, int number)</td></tr>
+<tr class="memdesc:a3315a8b30528dfb2ad6d535fd5d1f290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém os aeroportos com o maior tráfego, limitado por um número específico.  <br /></td></tr>
 <tr class="separator:a3315a8b30528dfb2ad6d535fd5d1f290"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1948b1bc2d8e109a0b46ac6bd9fc4a6f" id="r_a1948b1bc2d8e109a0b46ac6bd9fc4a6f"><td class="memItemLeft" align="right" valign="top">static set&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a1948b1bc2d8e109a0b46ac6bd9fc4a6f">essentialAirports</a> (<a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader)</td></tr>
+<tr class="memdesc:a1948b1bc2d8e109a0b46ac6bd9fc4a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifica os aeroportos essenciais no <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>.  <br /></td></tr>
 <tr class="separator:a1948b1bc2d8e109a0b46ac6bd9fc4a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd4ea9f548168e83e77670d98aba40a5" id="r_afd4ea9f548168e83e77670d98aba40a5"><td class="memItemLeft" align="right" valign="top">static tuple&lt; vector&lt; pair&lt; string, string &gt; &gt;, int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#afd4ea9f548168e83e77670d98aba40a5">getMaxStops</a> (<a class="el" href="class_file_reader.html">FileReader</a> &amp;fileReader)</td></tr>
+<tr class="memdesc:afd4ea9f548168e83e77670d98aba40a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encontra o número máximo de paradas entre quaisquer dois aeroportos no <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>.  <br /></td></tr>
 <tr class="separator:afd4ea9f548168e83e77670d98aba40a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_statistics_8h_source.html#l00011">11</a> of file <a class="el" href="_statistics_8h_source.html">Statistics.h</a>.</p>
+<div class="textblock"><p>Classe responsável por calcular estatísticas com base nos dados do <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8h_source.html#l00015">15</a> of file <a class="el" href="_statistics_8h_source.html">Statistics.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3315a8b30528dfb2ad6d535fd5d1f290" name="a3315a8b30528dfb2ad6d535fd5d1f290"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3315a8b30528dfb2ad6d535fd5d1f290">&#9670;&#160;</a></span>airports_with_the_most_trafic()</h2>
@@ -153,7 +177,28 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00242">242</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Obtém os aeroportos com o maior tráfego, limitado por um número específico. </p>
+<p>Retorna uma lista dos aeroportos com o maior número de tráfego.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+    <tr><td class="paramname">number</td><td>Número máximo de aeroportos a serem retornados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vetor de aeroportos com o maior tráfego.</dd></dl>
+<p>A complexidade deste método é O(V * log V), onde V é o número de vértices (aeroportos).</p>
+<p>Essa função calcula e retorna uma lista dos 'n' aeroportos com o maior número de conexões de voos. A lista é ordenada em ordem decrescente com base no número de conexões.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileReader</td><td>Referência para o objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> que contém as informações do grafo de voos. </td></tr>
+    <tr><td class="paramname">number</td><td>O número de aeroportos que deseja-se retornar com o maior tráfego. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Um vetor de strings contendo os códigos dos 'n' aeroportos com o maior número de conexões. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00337">337</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -181,7 +226,29 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00287">287</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Identifica os aeroportos essenciais no <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>. </p>
+<p>Visita recursivamente os vértices no grafo usando o algoritmo de Tarjan para identificar vértices críticos.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Conjunto de aeroportos essenciais.</dd></dl>
+<p>A complexidade deste método é O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).</p>
+<p>Esta função é uma implementação do algoritmo de Tarjan para encontrar vértices de articulação em um grafo não-direcionado. O algoritmo ajuda a identificar vértices em um grafo cuja remoção aumenta o número de componentes conectados.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vtx</td><td>Vértice atual a ser visitado. </td></tr>
+    <tr><td class="paramname">time</td><td>Variável que mantém o tempo de descoberta dos vértices. </td></tr>
+    <tr><td class="paramname">last</td><td>Vértice anterior visitado durante a recursão. </td></tr>
+    <tr><td class="paramname">res</td><td>Conjunto de strings para armazenar os vértices de articulação encontrados. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>Referência para o objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> que contém as informações do grafo de voos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00394">394</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -209,7 +276,31 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00328">328</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Encontra o número máximo de paradas entre quaisquer dois aeroportos no <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>. </p>
+<p>Encontra os caminhos de maior comprimento (paragens) dentro do grafo de voos.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Tupla contendo o caminho mais longo, o número máximo de paradas e o número de caminhos com o mesmo número de paradas.</dd></dl>
+<p>A complexidade deste método depende do número de aeroportos alcançáveis e do número de paradas. Em um grafo com V vértices e E arestas, a complexidade é aproximadamente O(V^2 * (V + E)).</p>
+<p>Esta função determina os caminhos mais longos (em termos de número de paragens) possíveis dentro do grafo de voos, a partir de cada vértice (aeroporto) no grafo. Ela percorre o grafo utilizando busca em largura (BFS), registrando os caminhos com o maior número de paragens e contabilizando o número de caminhos máximos existentes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileReader</td><td>Referência para o objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> que contém as informações do grafo de voos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Uma tupla contendo:<ul>
+<li>Um vetor de pares de strings representando os pares de aeroportos que compõem os caminhos mais longos.</li>
+<li>O número máximo de paragens encontrado.</li>
+<li>O número de caminhos máximos (caminhos com o mesmo número máximo de paragens). </li>
+</ul>
+</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00468">468</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -237,7 +328,26 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00191">191</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Encontra o caminho de viagem mais longo entre dois aeroportos. </p>
+<p>Encontra os pares de aeroportos com o maior número de paradas entre eles.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O par de aeroportos representando o caminho mais longo.</dd></dl>
+<p>Este método utiliza busca em largura (BFS). Em um grafo com V vértices e E arestas, a complexidade é aproximadamente O(V * (V + E)).</p>
+<p>Esta função utiliza uma busca em largura (BFS) para encontrar pares de aeroportos que possuem o maior número de paradas entre eles. Retorna uma lista de pares de aeroportos com o maior número de paradas, onde cada par representa um caminho máximo entre dois aeroportos.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileReader</td><td>Referência para o objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> que contém as informações do grafo de voos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Um vetor de pares de strings representando os aeroportos com o maior número de paradas entre eles. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00276">276</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -275,7 +385,27 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00015">15</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Obtém o número de companhias aéreas operando em um aeroporto específico. </p>
+<p>Obtém o número de companhias aéreas de um aeroporto específico.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>O código do aeroporto. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de companhias aéreas operando no aeroporto especificado.</dd></dl>
+<p>A complexidade deste método é O(E), onde E é o número de arestas (voos) saindo do aeroporto.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>O código do aeroporto. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de companhias aéreas do aeroporto. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00038">38</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -303,7 +433,25 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00003">3</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Obtém o número total de aeroportos nos dados. </p>
+<p>Obtém o número de aeroportos a partir do <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número total de aeroportos.</dd></dl>
+<p>A complexidade deste método é O(1).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de aeroportos. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00008">8</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -331,7 +479,25 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00007">7</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Obtém o número total de voos nos dados. </p>
+<p>Obtém o número de voos a partir do <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número total de voos.</dd></dl>
+<p>A complexidade deste método é O(1).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de voos. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00017">17</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -369,7 +535,26 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00011">11</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Obtém o número de voos partindo de um aeroporto específico. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>O código do aeroporto. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de voos partindo do aeroporto especificado.</dd></dl>
+<p>A complexidade deste método é O(E), onde E é o número de arestas (voos) saindo do aeroporto.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>O código do aeroporto. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de voos partindo do aeroporto. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00027">27</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -407,7 +592,27 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00066">66</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Calcula o número de voos partindo de um aeroporto para diferentes países. </p>
+<p>Obtém o número de voos a partir de um aeroporto para diferentes países.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>Código do aeroporto. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de voos partindo do aeroporto para países diferentes.</dd></dl>
+<p>A complexidade deste método é O(E), onde E é o número de arestas (voos) saindo do aeroporto.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>O código do aeroporto. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de voos do aeroporto para países diferentes. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00114">114</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -445,7 +650,27 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00036">36</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Obtém o número de voos partindo de uma cidade específica. </p>
+<p>Obtém o número de voos a partir de uma cidade para diferentes países.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cityName</td><td>O nome da cidade. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de voos partindo da cidade especificada.</dd></dl>
+<p>A complexidade deste método é O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cityName</td><td>O nome da cidade. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de voos da cidade para países diferentes. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00070">70</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -483,7 +708,27 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00048">48</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Calcula o número de voos partindo de uma cidade para diferentes países. </p>
+<p>Obtém o número de voos a partir de uma cidade para diferentes países.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cityName</td><td>Nome da cidade. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de voos partindo da cidade para países diferentes.</dd></dl>
+<p>A complexidade deste método é O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cityName</td><td>O nome da cidade. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de voos da cidade para países diferentes. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00088">88</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -511,7 +756,25 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00027">27</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Obtém o número de voos partindo de cada aeroporto. </p>
+<p>Obtém o número de voos de cada aeroporto.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Um mapa com o número de voos partindo de cada aeroporto.</dd></dl>
+<p>A complexidade deste método é O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Um mapeamento de cada aeroporto para o número de voos. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00055">55</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -549,7 +812,28 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00078">78</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Calcula o número de aeroportos alcançáveis a partir de um aeroporto. </p>
+<p>Obtém o número de aeroportos alcançáveis a partir de um aeroporto com um determinado número de paradas.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>Código do aeroporto de origem. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de aeroportos alcançáveis a partir do aeroporto especificado.</dd></dl>
+<p>A complexidade deste método é aproximadamente O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>O código do aeroporto. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a>. </td></tr>
+    <tr><td class="paramname">number_of_stops</td><td>O número de paradas. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de aeroportos alcançáveis a partir do aeroporto com o número de paradas fornecido. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00133">133</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -593,7 +877,30 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00159">159</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Calcula o número de aeroportos alcançáveis a partir de um aeroporto com um número específico de paradas. </p>
+<p>Calcula o número de aeroportos alcançáveis a partir de um aeroporto, respeitando um limite de paradas.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>Código do aeroporto de origem. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+    <tr><td class="paramname">number_of_stops</td><td>Número de paradas permitidas. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de aeroportos alcançáveis a partir do aeroporto especificado com o número de paradas.</dd></dl>
+<p>A complexidade deste método é aproximadamente O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).</p>
+<p>Esta função utiliza uma busca em largura (BFS) para calcular o número de aeroportos alcançáveis a partir de um aeroporto específico, considerando um número máximo de paradas permitidas.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>Código do aeroporto a partir do qual o cálculo é iniciado. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>Referência para o objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> que contém as informações do grafo de voos. </td></tr>
+    <tr><td class="paramname">number_of_stops</td><td>Número máximo de paradas permitidas para alcançar outros aeroportos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de aeroportos alcançáveis a partir do aeroporto, respeitando o limite de paradas. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00235">235</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -631,7 +938,28 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00304">304</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Calcula o número de cidades alcançáveis a partir de um aeroporto. </p>
+<p>Calcula o número de cidades alcançáveis a partir de um aeroporto específico.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>Código do aeroporto de origem. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de cidades alcançáveis a partir do aeroporto especificado.</dd></dl>
+<p>A complexidade deste método é aproximadamente O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).</p>
+<p>Este método utiliza o grafo de voos e encontra o número de cidades para as quais se pode viajar a partir do aeroporto fornecido. Utiliza uma busca nos adjacentes do aeroporto para identificar as cidades alcançáveis.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>Código do aeroporto a partir do qual a busca de cidades alcançáveis será iniciada. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>Referência para o objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> que contém as informações do grafo de voos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de cidades alcançáveis a partir do aeroporto especificado. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00421">421</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -675,7 +1003,19 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00125">125</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Calcula o número de cidades alcançáveis a partir de um aeroporto com um número específico de paradas. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>Código do aeroporto de origem. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+    <tr><td class="paramname">number_of_stops</td><td>Número de paradas permitidas. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de cidades alcançáveis a partir do aeroporto especificado com o número de paradas.</dd></dl>
+<p>A complexidade deste método é aproximadamente O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos). </p>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00190">190</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -719,7 +1059,30 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00091">91</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Calcula o número de países alcançáveis a partir de um aeroporto com um número específico de paradas. </p>
+<p>Calcula o número de países alcançáveis a partir de um aeroporto com um limite de paradas.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>Código do aeroporto de origem. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+    <tr><td class="paramname">number_of_stops</td><td>Número de paradas permitidas. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de países alcançáveis a partir do aeroporto especificado com o número de paradas.</dd></dl>
+<p>A complexidade deste método é aproximadamente O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).</p>
+<p>Esta função usa uma busca em largura (BFS) para calcular o número de países alcançáveis a partir de um aeroporto, considerando um número máximo de paradas.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>Código do aeroporto a partir do qual o cálculo é iniciado. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>Referência para o objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> que contém as informações do grafo de voos. </td></tr>
+    <tr><td class="paramname">number_of_stops</td><td>Número máximo de paradas permitidas para alcançar outros aeroportos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de países alcançáveis a partir do aeroporto, respeitando o limite de paradas. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00156">156</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>
@@ -757,7 +1120,28 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00316">316</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
+<p>Calcula o número de países alcançáveis a partir de um aeroporto. </p>
+<p>Calcula o número de países alcançáveis a partir de um aeroporto específico.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>Código do aeroporto de origem. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>O objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> contendo os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de países alcançáveis a partir do aeroporto especificado.</dd></dl>
+<p>A complexidade deste método é aproximadamente O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).</p>
+<p>Esta função utiliza o grafo de voos e identifica o número de países para os quais se pode viajar a partir do aeroporto fornecido. Realiza uma busca nos destinos dos voos adjacentes ao aeroporto para determinar os países alcançáveis.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">airportCode</td><td>Código do aeroporto a partir do qual a busca por países alcançáveis será iniciada. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>Referência para o objeto <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> que contém as informações do grafo de voos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O número de países alcançáveis a partir do aeroporto especificado. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_statistics_8cpp_source.html#l00443">443</a> of file <a class="el" href="_statistics_8cpp_source.html">Statistics.cpp</a>.</p>
 
 </div>
 </div>

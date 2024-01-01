@@ -1,50 +1,59 @@
 \doxysection{Statistics Class Reference}
 \hypertarget{class_statistics}{}\label{class_statistics}\index{Statistics@{Statistics}}
+
+
+Classe responsável por calcular estatísticas com base nos dados do \doxylink{class_file_reader}{File\+Reader}.  
+
+
+
+
+{\ttfamily \#include $<$Statistics.\+h$>$}
+
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static int \mbox{\hyperlink{class_statistics_a55e96085b1ea7c70ebb104dba5209363}{number\+\_\+of\+\_\+airports}} (const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Obtém o número total de aeroportos nos dados. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{class_statistics_ae42d3f8d7db59a0a7810d2cea7006d2d}{number\+\_\+of\+\_\+flights}} (const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Obtém o número total de voos nos dados. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{class_statistics_a28efebb36b9381fb365738519c0f9ffc}{number\+\_\+of\+\_\+flights\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Obtém o número de voos partindo de um aeroporto específico. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{class_statistics_a79729841cd3319f963f0f84c36479faa}{number\+\_\+of\+\_\+airlines\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Obtém o número de companhias aéreas operando em um aeroporto específico. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{class_statistics_a87b184d23b5bc9b46f7ace55b68814d1}{number\+\_\+of\+\_\+flights\+\_\+from\+\_\+city}} (const string \&city\+Name, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Obtém o número de voos partindo de uma cidade específica. \end{DoxyCompactList}\item 
 static unordered\+\_\+map$<$ string, int $>$ \mbox{\hyperlink{class_statistics_a674069e216bfb5982fac645f1c3399d0}{number\+\_\+of\+\_\+flights\+\_\+from\+\_\+each\+\_\+airport}} (const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Obtém o número de voos partindo de cada aeroporto. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{class_statistics_a16e27a57083a6704d62003cfe93bbd6c}{number\+\_\+of\+\_\+flights\+\_\+from\+\_\+city\+\_\+to\+\_\+diferent\+\_\+contrys}} (const string \&city\+Name, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Calcula o número de voos partindo de uma cidade para diferentes países. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{class_statistics_a7f1ed25e6db66850b9adc867b9352b5a}{number\+\_\+of\+\_\+flights\+\_\+from\+\_\+airport\+\_\+to\+\_\+diferent\+\_\+contrys}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Calcula o número de voos partindo de um aeroporto para diferentes países. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{class_statistics_a08ecfcd8a1ba1763c853d2997e38b3ee}{number\+\_\+of\+\_\+reacheble\+\_\+airports\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Calcula o número de aeroportos alcançáveis a partir de um aeroporto. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{class_statistics_a1961351f3da94e655de795a9c903b60a}{number\+\_\+of\+\_\+reacheble\+\_\+cities\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Calcula o número de cidades alcançáveis a partir de um aeroporto. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{class_statistics_ab3912723a3e91d56bfd58bfaed55641c}{number\+\_\+of\+\_\+reacheble\+\_\+countries\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Calcula o número de países alcançáveis a partir de um aeroporto. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{class_statistics_adabcd0c3188f42a59a858e07784fced0}{number\+\_\+of\+\_\+reacheble\+\_\+airports\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader, int number\+\_\+of\+\_\+stops)
-\item 
+\begin{DoxyCompactList}\small\item\em Calcula o número de aeroportos alcançáveis a partir de um aeroporto com um número específico de paradas. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{class_statistics_a968bebfacceb44c85106165d103a9b29}{number\+\_\+of\+\_\+reacheble\+\_\+cities\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader, int number\+\_\+of\+\_\+stops)
-\item 
+\begin{DoxyCompactList}\small\item\em Calcula o número de cidades alcançáveis a partir de um aeroporto com um número específico de paradas. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{class_statistics_a36ac8ce3b112b7b51de3eb028c723d5b}{number\+\_\+of\+\_\+reacheble\+\_\+contries\+\_\+from\+\_\+airport}} (const string \&airport\+Code, const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader, int number\+\_\+of\+\_\+stops)
-\item 
+\begin{DoxyCompactList}\small\item\em Calcula o número de países alcançáveis a partir de um aeroporto com um número específico de paradas. \end{DoxyCompactList}\item 
 static vector$<$ pair$<$ string, string $>$ $>$ \mbox{\hyperlink{class_statistics_a8b1a8858f4244aaccc3ee3a8c5253016}{max\+\_\+trip\+\_\+length}} (const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Encontra o caminho de viagem mais longo entre dois aeroportos. \end{DoxyCompactList}\item 
 static vector$<$ string $>$ \mbox{\hyperlink{class_statistics_a3315a8b30528dfb2ad6d535fd5d1f290}{airports\+\_\+with\+\_\+the\+\_\+most\+\_\+trafic}} (const \mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader, int number)
-\item 
+\begin{DoxyCompactList}\small\item\em Obtém os aeroportos com o maior tráfego, limitado por um número específico. \end{DoxyCompactList}\item 
 static set$<$ string $>$ \mbox{\hyperlink{class_statistics_a1948b1bc2d8e109a0b46ac6bd9fc4a6f}{essential\+Airports}} (\mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Identifica os aeroportos essenciais no \doxylink{class_file_reader}{File\+Reader}. \end{DoxyCompactList}\item 
 static tuple$<$ vector$<$ pair$<$ string, string $>$ $>$, int, int $>$ \mbox{\hyperlink{class_statistics_afd4ea9f548168e83e77670d98aba40a5}{get\+Max\+Stops}} (\mbox{\hyperlink{class_file_reader}{File\+Reader}} \&file\+Reader)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Encontra o número máximo de paradas entre quaisquer dois aeroportos no \doxylink{class_file_reader}{File\+Reader}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Classe responsável por calcular estatísticas com base nos dados do \doxylink{class_file_reader}{File\+Reader}. 
 
-
-Definition at line \mbox{\hyperlink{_statistics_8h_source_l00011}{11}} of file \mbox{\hyperlink{_statistics_8h_source}{Statistics.\+h}}.
+Definition at line \mbox{\hyperlink{_statistics_8h_source_l00015}{15}} of file \mbox{\hyperlink{_statistics_8h_source}{Statistics.\+h}}.
 
 
 
@@ -57,7 +66,37 @@ Definition at line \mbox{\hyperlink{_statistics_8h_source_l00011}{11}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00242}{242}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Obtém os aeroportos com o maior tráfego, limitado por um número específico. 
+
+Retorna uma lista dos aeroportos com o maior número de tráfego.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+{\em number} & Número máximo de aeroportos a serem retornados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vetor de aeroportos com o maior tráfego.
+\end{DoxyReturn}
+A complexidade deste método é O(\+V \texorpdfstring{$\ast$}{*} log V), onde V é o número de vértices (aeroportos).
+
+Essa função calcula e retorna uma lista dos \textquotesingle{}n\textquotesingle{} aeroportos com o maior número de conexões de voos. A lista é ordenada em ordem decrescente com base no número de conexões.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Reader} & Referência para o objeto \doxylink{class_file_reader}{File\+Reader} que contém as informações do grafo de voos. \\
+\hline
+{\em number} & O número de aeroportos que deseja-\/se retornar com o maior tráfego. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um vetor de strings contendo os códigos dos \textquotesingle{}n\textquotesingle{} aeroportos com o maior número de conexões. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00337}{337}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_a1948b1bc2d8e109a0b46ac6bd9fc4a6f}\label{class_statistics_a1948b1bc2d8e109a0b46ac6bd9fc4a6f} 
 \index{Statistics@{Statistics}!essentialAirports@{essentialAirports}}
@@ -67,7 +106,38 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00242}{242}} of fil
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00287}{287}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Identifica os aeroportos essenciais no \doxylink{class_file_reader}{File\+Reader}. 
+
+Visita recursivamente os vértices no grafo usando o algoritmo de Tarjan para identificar vértices críticos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Conjunto de aeroportos essenciais.
+\end{DoxyReturn}
+A complexidade deste método é O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).
+
+Esta função é uma implementação do algoritmo de Tarjan para encontrar vértices de articulação em um grafo não-\/direcionado. O algoritmo ajuda a identificar vértices em um grafo cuja remoção aumenta o número de componentes conectados.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vtx} & Vértice atual a ser visitado. \\
+\hline
+{\em time} & Variável que mantém o tempo de descoberta dos vértices. \\
+\hline
+{\em last} & Vértice anterior visitado durante a recursão. \\
+\hline
+{\em res} & Conjunto de strings para armazenar os vértices de articulação encontrados. \\
+\hline
+{\em file\+Reader} & Referência para o objeto \doxylink{class_file_reader}{File\+Reader} que contém as informações do grafo de voos. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00394}{394}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_afd4ea9f548168e83e77670d98aba40a5}\label{class_statistics_afd4ea9f548168e83e77670d98aba40a5} 
 \index{Statistics@{Statistics}!getMaxStops@{getMaxStops}}
@@ -77,7 +147,38 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00287}{287}} of fil
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00328}{328}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Encontra o número máximo de paradas entre quaisquer dois aeroportos no \doxylink{class_file_reader}{File\+Reader}. 
+
+Encontra os caminhos de maior comprimento (paragens) dentro do grafo de voos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla contendo o caminho mais longo, o número máximo de paradas e o número de caminhos com o mesmo número de paradas.
+\end{DoxyReturn}
+A complexidade deste método depende do número de aeroportos alcançáveis e do número de paradas. Em um grafo com V vértices e E arestas, a complexidade é aproximadamente O(V\texorpdfstring{$^\wedge$}{\string^}2 \texorpdfstring{$\ast$}{*} (V + E)).
+
+Esta função determina os caminhos mais longos (em termos de número de paragens) possíveis dentro do grafo de voos, a partir de cada vértice (aeroporto) no grafo. Ela percorre o grafo utilizando busca em largura (BFS), registrando os caminhos com o maior número de paragens e contabilizando o número de caminhos máximos existentes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Reader} & Referência para o objeto \doxylink{class_file_reader}{File\+Reader} que contém as informações do grafo de voos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uma tupla contendo\+:
+\begin{DoxyItemize}
+\item Um vetor de pares de strings representando os pares de aeroportos que compõem os caminhos mais longos.
+\item O número máximo de paragens encontrado.
+\item O número de caminhos máximos (caminhos com o mesmo número máximo de paragens). 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00468}{468}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_a8b1a8858f4244aaccc3ee3a8c5253016}\label{class_statistics_a8b1a8858f4244aaccc3ee3a8c5253016} 
 \index{Statistics@{Statistics}!max\_trip\_length@{max\_trip\_length}}
@@ -87,7 +188,33 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00328}{328}} of fil
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00191}{191}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Encontra o caminho de viagem mais longo entre dois aeroportos. 
+
+Encontra os pares de aeroportos com o maior número de paradas entre eles.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O par de aeroportos representando o caminho mais longo.
+\end{DoxyReturn}
+Este método utiliza busca em largura (BFS). Em um grafo com V vértices e E arestas, a complexidade é aproximadamente O(V \texorpdfstring{$\ast$}{*} (V + E)).
+
+Esta função utiliza uma busca em largura (BFS) para encontrar pares de aeroportos que possuem o maior número de paradas entre eles. Retorna uma lista de pares de aeroportos com o maior número de paradas, onde cada par representa um caminho máximo entre dois aeroportos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Reader} & Referência para o objeto \doxylink{class_file_reader}{File\+Reader} que contém as informações do grafo de voos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um vetor de pares de strings representando os aeroportos com o maior número de paradas entre eles. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00276}{276}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_a79729841cd3319f963f0f84c36479faa}\label{class_statistics_a79729841cd3319f963f0f84c36479faa} 
 \index{Statistics@{Statistics}!number\_of\_airlines\_from\_airport@{number\_of\_airlines\_from\_airport}}
@@ -97,7 +224,35 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00191}{191}} of fil
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Obtém o número de companhias aéreas operando em um aeroporto específico. 
+
+Obtém o número de companhias aéreas de um aeroporto específico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & O código do aeroporto. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de companhias aéreas operando no aeroporto especificado.
+\end{DoxyReturn}
+A complexidade deste método é O(\+E), onde E é o número de arestas (voos) saindo do aeroporto.
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & O código do aeroporto. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de companhias aéreas do aeroporto. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_a55e96085b1ea7c70ebb104dba5209363}\label{class_statistics_a55e96085b1ea7c70ebb104dba5209363} 
 \index{Statistics@{Statistics}!number\_of\_airports@{number\_of\_airports}}
@@ -107,7 +262,31 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00015}{15}} of file
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Obtém o número total de aeroportos nos dados. 
+
+Obtém o número de aeroportos a partir do \doxylink{class_file_reader}{File\+Reader}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número total de aeroportos.
+\end{DoxyReturn}
+A complexidade deste método é O(1).
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de aeroportos. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_ae42d3f8d7db59a0a7810d2cea7006d2d}\label{class_statistics_ae42d3f8d7db59a0a7810d2cea7006d2d} 
 \index{Statistics@{Statistics}!number\_of\_flights@{number\_of\_flights}}
@@ -117,7 +296,31 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00003}{3}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Obtém o número total de voos nos dados. 
+
+Obtém o número de voos a partir do \doxylink{class_file_reader}{File\+Reader}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número total de voos.
+\end{DoxyReturn}
+A complexidade deste método é O(1).
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de voos. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_a28efebb36b9381fb365738519c0f9ffc}\label{class_statistics_a28efebb36b9381fb365738519c0f9ffc} 
 \index{Statistics@{Statistics}!number\_of\_flights\_from\_airport@{number\_of\_flights\_from\_airport}}
@@ -127,7 +330,33 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00007}{7}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Obtém o número de voos partindo de um aeroporto específico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & O código do aeroporto. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de voos partindo do aeroporto especificado.
+\end{DoxyReturn}
+A complexidade deste método é O(\+E), onde E é o número de arestas (voos) saindo do aeroporto.
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & O código do aeroporto. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de voos partindo do aeroporto. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_a7f1ed25e6db66850b9adc867b9352b5a}\label{class_statistics_a7f1ed25e6db66850b9adc867b9352b5a} 
 \index{Statistics@{Statistics}!number\_of\_flights\_from\_airport\_to\_diferent\_contrys@{number\_of\_flights\_from\_airport\_to\_diferent\_contrys}}
@@ -137,7 +366,35 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00011}{11}} of file
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Calcula o número de voos partindo de um aeroporto para diferentes países. 
+
+Obtém o número de voos a partir de um aeroporto para diferentes países.
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & Código do aeroporto. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de voos partindo do aeroporto para países diferentes.
+\end{DoxyReturn}
+A complexidade deste método é O(\+E), onde E é o número de arestas (voos) saindo do aeroporto.
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & O código do aeroporto. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de voos do aeroporto para países diferentes. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00114}{114}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_a87b184d23b5bc9b46f7ace55b68814d1}\label{class_statistics_a87b184d23b5bc9b46f7ace55b68814d1} 
 \index{Statistics@{Statistics}!number\_of\_flights\_from\_city@{number\_of\_flights\_from\_city}}
@@ -147,7 +404,35 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00066}{66}} of file
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Obtém o número de voos partindo de uma cidade específica. 
+
+Obtém o número de voos a partir de uma cidade para diferentes países.
+
+
+\begin{DoxyParams}{Parameters}
+{\em city\+Name} & O nome da cidade. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de voos partindo da cidade especificada.
+\end{DoxyReturn}
+A complexidade deste método é O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).
+
+
+\begin{DoxyParams}{Parameters}
+{\em city\+Name} & O nome da cidade. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de voos da cidade para países diferentes. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_a16e27a57083a6704d62003cfe93bbd6c}\label{class_statistics_a16e27a57083a6704d62003cfe93bbd6c} 
 \index{Statistics@{Statistics}!number\_of\_flights\_from\_city\_to\_diferent\_contrys@{number\_of\_flights\_from\_city\_to\_diferent\_contrys}}
@@ -157,7 +442,35 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00036}{36}} of file
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Calcula o número de voos partindo de uma cidade para diferentes países. 
+
+Obtém o número de voos a partir de uma cidade para diferentes países.
+
+
+\begin{DoxyParams}{Parameters}
+{\em city\+Name} & Nome da cidade. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de voos partindo da cidade para países diferentes.
+\end{DoxyReturn}
+A complexidade deste método é O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).
+
+
+\begin{DoxyParams}{Parameters}
+{\em city\+Name} & O nome da cidade. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de voos da cidade para países diferentes. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00088}{88}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_a674069e216bfb5982fac645f1c3399d0}\label{class_statistics_a674069e216bfb5982fac645f1c3399d0} 
 \index{Statistics@{Statistics}!number\_of\_flights\_from\_each\_airport@{number\_of\_flights\_from\_each\_airport}}
@@ -167,7 +480,31 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00048}{48}} of file
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Obtém o número de voos partindo de cada aeroporto. 
+
+Obtém o número de voos de cada aeroporto.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um mapa com o número de voos partindo de cada aeroporto.
+\end{DoxyReturn}
+A complexidade deste método é O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um mapeamento de cada aeroporto para o número de voos. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_a08ecfcd8a1ba1763c853d2997e38b3ee}\label{class_statistics_a08ecfcd8a1ba1763c853d2997e38b3ee} 
 \index{Statistics@{Statistics}!number\_of\_reacheble\_airports\_from\_airport@{number\_of\_reacheble\_airports\_from\_airport}}
@@ -177,7 +514,37 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00027}{27}} of file
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Calcula o número de aeroportos alcançáveis a partir de um aeroporto. 
+
+Obtém o número de aeroportos alcançáveis a partir de um aeroporto com um determinado número de paradas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & Código do aeroporto de origem. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de aeroportos alcançáveis a partir do aeroporto especificado.
+\end{DoxyReturn}
+A complexidade deste método é aproximadamente O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & O código do aeroporto. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader}. \\
+\hline
+{\em number\+\_\+of\+\_\+stops} & O número de paradas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de aeroportos alcançáveis a partir do aeroporto com o número de paradas fornecido. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00133}{133}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_adabcd0c3188f42a59a858e07784fced0}\label{class_statistics_adabcd0c3188f42a59a858e07784fced0} 
 \index{Statistics@{Statistics}!number\_of\_reacheble\_airports\_from\_airport@{number\_of\_reacheble\_airports\_from\_airport}}
@@ -187,7 +554,41 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00078}{78}} of file
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00159}{159}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Calcula o número de aeroportos alcançáveis a partir de um aeroporto com um número específico de paradas. 
+
+Calcula o número de aeroportos alcançáveis a partir de um aeroporto, respeitando um limite de paradas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & Código do aeroporto de origem. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+{\em number\+\_\+of\+\_\+stops} & Número de paradas permitidas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de aeroportos alcançáveis a partir do aeroporto especificado com o número de paradas.
+\end{DoxyReturn}
+A complexidade deste método é aproximadamente O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).
+
+Esta função utiliza uma busca em largura (BFS) para calcular o número de aeroportos alcançáveis a partir de um aeroporto específico, considerando um número máximo de paradas permitidas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & Código do aeroporto a partir do qual o cálculo é iniciado. \\
+\hline
+{\em file\+Reader} & Referência para o objeto \doxylink{class_file_reader}{File\+Reader} que contém as informações do grafo de voos. \\
+\hline
+{\em number\+\_\+of\+\_\+stops} & Número máximo de paradas permitidas para alcançar outros aeroportos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de aeroportos alcançáveis a partir do aeroporto, respeitando o limite de paradas. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00235}{235}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_a1961351f3da94e655de795a9c903b60a}\label{class_statistics_a1961351f3da94e655de795a9c903b60a} 
 \index{Statistics@{Statistics}!number\_of\_reacheble\_cities\_from\_airport@{number\_of\_reacheble\_cities\_from\_airport}}
@@ -197,7 +598,37 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00159}{159}} of fil
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00304}{304}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Calcula o número de cidades alcançáveis a partir de um aeroporto. 
+
+Calcula o número de cidades alcançáveis a partir de um aeroporto específico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & Código do aeroporto de origem. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de cidades alcançáveis a partir do aeroporto especificado.
+\end{DoxyReturn}
+A complexidade deste método é aproximadamente O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).
+
+Este método utiliza o grafo de voos e encontra o número de cidades para as quais se pode viajar a partir do aeroporto fornecido. Utiliza uma busca nos adjacentes do aeroporto para identificar as cidades alcançáveis.
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & Código do aeroporto a partir do qual a busca de cidades alcançáveis será iniciada. \\
+\hline
+{\em file\+Reader} & Referência para o objeto \doxylink{class_file_reader}{File\+Reader} que contém as informações do grafo de voos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de cidades alcançáveis a partir do aeroporto especificado. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00421}{421}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_a968bebfacceb44c85106165d103a9b29}\label{class_statistics_a968bebfacceb44c85106165d103a9b29} 
 \index{Statistics@{Statistics}!number\_of\_reacheble\_cities\_from\_airport@{number\_of\_reacheble\_cities\_from\_airport}}
@@ -207,7 +638,23 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00304}{304}} of fil
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00125}{125}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Calcula o número de cidades alcançáveis a partir de um aeroporto com um número específico de paradas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & Código do aeroporto de origem. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+{\em number\+\_\+of\+\_\+stops} & Número de paradas permitidas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de cidades alcançáveis a partir do aeroporto especificado com o número de paradas.
+\end{DoxyReturn}
+A complexidade deste método é aproximadamente O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos). 
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00190}{190}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_a36ac8ce3b112b7b51de3eb028c723d5b}\label{class_statistics_a36ac8ce3b112b7b51de3eb028c723d5b} 
 \index{Statistics@{Statistics}!number\_of\_reacheble\_contries\_from\_airport@{number\_of\_reacheble\_contries\_from\_airport}}
@@ -217,7 +664,41 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00125}{125}} of fil
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Calcula o número de países alcançáveis a partir de um aeroporto com um número específico de paradas. 
+
+Calcula o número de países alcançáveis a partir de um aeroporto com um limite de paradas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & Código do aeroporto de origem. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+{\em number\+\_\+of\+\_\+stops} & Número de paradas permitidas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de países alcançáveis a partir do aeroporto especificado com o número de paradas.
+\end{DoxyReturn}
+A complexidade deste método é aproximadamente O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).
+
+Esta função usa uma busca em largura (BFS) para calcular o número de países alcançáveis a partir de um aeroporto, considerando um número máximo de paradas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & Código do aeroporto a partir do qual o cálculo é iniciado. \\
+\hline
+{\em file\+Reader} & Referência para o objeto \doxylink{class_file_reader}{File\+Reader} que contém as informações do grafo de voos. \\
+\hline
+{\em number\+\_\+of\+\_\+stops} & Número máximo de paradas permitidas para alcançar outros aeroportos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de países alcançáveis a partir do aeroporto, respeitando o limite de paradas. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00156}{156}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 \Hypertarget{class_statistics_ab3912723a3e91d56bfd58bfaed55641c}\label{class_statistics_ab3912723a3e91d56bfd58bfaed55641c} 
 \index{Statistics@{Statistics}!number\_of\_reacheble\_countries\_from\_airport@{number\_of\_reacheble\_countries\_from\_airport}}
@@ -227,7 +708,37 @@ Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00091}{91}} of file
 
 
 
-Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00316}{316}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
+Calcula o número de países alcançáveis a partir de um aeroporto. 
+
+Calcula o número de países alcançáveis a partir de um aeroporto específico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & Código do aeroporto de origem. \\
+\hline
+{\em file\+Reader} & O objeto \doxylink{class_file_reader}{File\+Reader} contendo os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de países alcançáveis a partir do aeroporto especificado.
+\end{DoxyReturn}
+A complexidade deste método é aproximadamente O(V + E), onde V é o número de vértices (aeroportos) e E é o número de arestas (voos).
+
+Esta função utiliza o grafo de voos e identifica o número de países para os quais se pode viajar a partir do aeroporto fornecido. Realiza uma busca nos destinos dos voos adjacentes ao aeroporto para determinar os países alcançáveis.
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & Código do aeroporto a partir do qual a busca por países alcançáveis será iniciada. \\
+\hline
+{\em file\+Reader} & Referência para o objeto \doxylink{class_file_reader}{File\+Reader} que contém as informações do grafo de voos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de países alcançáveis a partir do aeroporto especificado. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_statistics_8cpp_source_l00443}{443}} of file \mbox{\hyperlink{_statistics_8cpp_source}{Statistics.\+cpp}}.
 
 
 

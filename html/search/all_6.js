@@ -1,21 +1,15 @@
 var searchData=
 [
-  ['point1_0',['point1',['../class_u_i.html#a00ed7266c555f2162217b780f9a053bc',1,'UI']]],
-  ['point10_1',['point10',['../class_u_i.html#a8f8b3d95db0c9709cdcfe9c633ffb774',1,'UI']]],
-  ['point11_2',['point11',['../class_u_i.html#a87c440ffb32a607981ac18d36cd78d9f',1,'UI']]],
-  ['point12_3',['point12',['../class_u_i.html#adaff74a82ade7863b57c1b5b5777c79f',1,'UI']]],
-  ['point14_4',['point14',['../class_u_i.html#a3f7dd555da1d6c68b45d3a2aa6771ce4',1,'UI']]],
-  ['point15_5',['point15',['../class_u_i.html#a68d290c137f2fa954b45bb1d5f8d3727',1,'UI']]],
-  ['point16_6',['point16',['../class_u_i.html#a7693bf43fd0f0a16075a32afbcd7608f',1,'UI']]],
-  ['point17_7',['point17',['../class_u_i.html#a457042125b70a32ddcfab94fd68714b4',1,'UI']]],
-  ['point2_8',['point2',['../class_u_i.html#aaef288fbc5e2530e3ed851d76857c77f',1,'UI']]],
-  ['point3_9',['point3',['../class_u_i.html#a22aec559c1001283a58ab65742a2b277',1,'UI']]],
-  ['point4_10',['point4',['../class_u_i.html#aae038df9abde058092392bc8c41488da',1,'UI']]],
-  ['point5_11',['point5',['../class_u_i.html#a98b70e0d889a3e2306e6b53d6c986c5f',1,'UI']]],
-  ['point6_12',['point6',['../class_u_i.html#aee3eebb8cfc61d2833bb384be3ab7c85',1,'UI']]],
-  ['point7_13',['point7',['../class_u_i.html#a01611a8b8aa092f372ca9052092c9b83',1,'UI']]],
-  ['point8_14',['point8',['../class_u_i.html#a6b7f0a7e2df3ced3c138fb01feb82f1e',1,'UI']]],
-  ['point9_15',['point9',['../class_u_i.html#a9015f19afee08550ae4e6772d3ffcd37',1,'UI']]],
-  ['print_5fmenu_16',['print_menu',['../class_u_i.html#abe65de52fc6385c78c39569464b18f2c',1,'UI']]],
-  ['project_202_17',['AED Project 2',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['number_5fof_5fairlines_5ffrom_5fairport_0',['number_of_airlines_from_airport',['../class_statistics.html#a79729841cd3319f963f0f84c36479faa',1,'Statistics']]],
+  ['number_5fof_5fairports_1',['number_of_airports',['../class_statistics.html#a55e96085b1ea7c70ebb104dba5209363',1,'Statistics']]],
+  ['number_5fof_5fflights_2',['number_of_flights',['../class_statistics.html#ae42d3f8d7db59a0a7810d2cea7006d2d',1,'Statistics']]],
+  ['number_5fof_5fflights_5ffrom_5fairport_3',['number_of_flights_from_airport',['../class_statistics.html#a28efebb36b9381fb365738519c0f9ffc',1,'Statistics']]],
+  ['number_5fof_5fflights_5ffrom_5fairport_5fto_5fdiferent_5fcontrys_4',['number_of_flights_from_airport_to_diferent_contrys',['../class_statistics.html#a7f1ed25e6db66850b9adc867b9352b5a',1,'Statistics']]],
+  ['number_5fof_5fflights_5ffrom_5fcity_5',['number_of_flights_from_city',['../class_statistics.html#a87b184d23b5bc9b46f7ace55b68814d1',1,'Statistics']]],
+  ['number_5fof_5fflights_5ffrom_5fcity_5fto_5fdiferent_5fcontrys_6',['number_of_flights_from_city_to_diferent_contrys',['../class_statistics.html#a16e27a57083a6704d62003cfe93bbd6c',1,'Statistics']]],
+  ['number_5fof_5fflights_5ffrom_5feach_5fairport_7',['number_of_flights_from_each_airport',['../class_statistics.html#a674069e216bfb5982fac645f1c3399d0',1,'Statistics']]],
+  ['number_5fof_5freacheble_5fairports_5ffrom_5fairport_8',['number_of_reacheble_airports_from_airport',['../class_statistics.html#a08ecfcd8a1ba1763c853d2997e38b3ee',1,'Statistics::number_of_reacheble_airports_from_airport(const string &amp;airportCode, const FileReader &amp;fileReader)'],['../class_statistics.html#adabcd0c3188f42a59a858e07784fced0',1,'Statistics::number_of_reacheble_airports_from_airport(const string &amp;airportCode, const FileReader &amp;fileReader, int number_of_stops)']]],
+  ['number_5fof_5freacheble_5fcities_5ffrom_5fairport_9',['number_of_reacheble_cities_from_airport',['../class_statistics.html#a1961351f3da94e655de795a9c903b60a',1,'Statistics::number_of_reacheble_cities_from_airport(const string &amp;airportCode, const FileReader &amp;fileReader)'],['../class_statistics.html#a968bebfacceb44c85106165d103a9b29',1,'Statistics::number_of_reacheble_cities_from_airport(const string &amp;airportCode, const FileReader &amp;fileReader, int number_of_stops)']]],
+  ['number_5fof_5freacheble_5fcontries_5ffrom_5fairport_10',['number_of_reacheble_contries_from_airport',['../class_statistics.html#a36ac8ce3b112b7b51de3eb028c723d5b',1,'Statistics']]],
+  ['number_5fof_5freacheble_5fcountries_5ffrom_5fairport_11',['number_of_reacheble_countries_from_airport',['../class_statistics.html#ab3912723a3e91d56bfd58bfaed55641c',1,'Statistics']]]
 ];

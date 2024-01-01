@@ -15,6 +15,7 @@ var searchData=
   ['get_5flatitude_12',['get_Latitude',['../class_airport.html#a3ef9349d90463cce2f4b07f202a391a9',1,'Airport']]],
   ['get_5flongitude_13',['get_Longitude',['../class_airport.html#a80cd1ede6100aa5b23af5c9cfce2185d',1,'Airport']]],
   ['get_5fname_14',['get_name',['../class_airline.html#ab12293b3534f3f76369d664a9f7fcda2',1,'Airline::get_Name()'],['../class_airport.html#ab23974e7feb48763fb34fe253f75cabc',1,'Airport::get_Name()']]],
-  ['graph_15',['Graph',['../class_graph.html',1,'']]],
-  ['graph_3c_20string_20_3e_16',['Graph&lt; string &gt;',['../class_graph.html',1,'']]]
+  ['getmaxstops_15',['getMaxStops',['../class_statistics.html#afd4ea9f548168e83e77670d98aba40a5',1,'Statistics']]],
+  ['graph_16',['Graph',['../class_graph.html',1,'']]],
+  ['graph_3c_20string_20_3e_17',['Graph&lt; string &gt;',['../class_graph.html',1,'']]]
 ];

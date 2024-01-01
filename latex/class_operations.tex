@@ -56,6 +56,22 @@ Encontra um caminho de roteamento entre dois aeroportos, evitando certos aeropor
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
+O caminho de roteamento entre os aeroportos, evitando os aeroportos específicos.
+\end{DoxyReturn}
+A complexidade deste método é dependente da implementação do algoritmo. Geralmente é O(\+V\texorpdfstring{$^\wedge$}{\string^}3), onde V é o número de vértices (aeroportos).
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Aeroporto de partida. \\
+\hline
+{\em destination} & Aeroporto de destino. \\
+\hline
+{\em file\+Reader} & Instância de \doxylink{class_file_reader}{File\+Reader} para acessar os dados. \\
+\hline
+{\em skip\+Airports} & Lista de aeroportos a serem evitados no caminho. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 O caminho de roteamento entre os aeroportos, evitando os aeroportos específicos. 
 \end{DoxyReturn}
 
@@ -71,6 +87,24 @@ Definition at line \mbox{\hyperlink{_operations_8cpp_source_l00137}{137}} of fil
 
 
 Encontra um caminho de roteamento entre dois aeroportos, evitando certos aeroportos e pesos específicos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Aeroporto de partida. \\
+\hline
+{\em destination} & Aeroporto de destino. \\
+\hline
+{\em file\+Reader} & Instância de \doxylink{class_file_reader}{File\+Reader} para acessar os dados. \\
+\hline
+{\em skip\+Airports} & Lista de aeroportos a serem evitados no caminho. \\
+\hline
+{\em allowed\+Weights} & Lista de pesos permitidos no caminho. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O caminho de roteamento entre os aeroportos, evitando aeroportos, usando pesos específicos.
+\end{DoxyReturn}
+A complexidade deste método é dependente da implementação do algoritmo. Geralmente é O(\+V\texorpdfstring{$^\wedge$}{\string^}3), onde V é o número de vértices (aeroportos).
 
 
 \begin{DoxyParams}{Parameters}
@@ -112,6 +146,20 @@ Encontra todos os caminhos de menor comprimento entre dois aeroportos.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
+Conjunto de caminhos de menor comprimento entre os aeroportos.
+\end{DoxyReturn}
+A complexidade deste método é dependente da implementação do algoritmo. Geralmente é O(\+V\texorpdfstring{$^\wedge$}{\string^}3), onde V é o número de vértices (aeroportos).
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Aeroporto de partida. \\
+\hline
+{\em destination} & Aeroporto de destino. \\
+\hline
+{\em file\+Reader} & Instância de \doxylink{class_file_reader}{File\+Reader} para acessar os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 Conjunto de caminhos de menor comprimento entre os aeroportos. 
 \end{DoxyReturn}
 
@@ -138,6 +186,18 @@ Obtém uma lista de códigos de aeroportos com base no nome de uma cidade.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
+Lista de códigos de aeroportos na cidade especificada.
+\end{DoxyReturn}
+A complexidade deste método é O(\+N), onde N é o número total de aeroportos nos dados.
+
+
+\begin{DoxyParams}{Parameters}
+{\em City\+Name} & Nome da cidade para buscar aeroportos. \\
+\hline
+{\em file\+Reader} & Instância de \doxylink{class_file_reader}{File\+Reader} para acessar os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 Lista de códigos de aeroportos na cidade especificada. 
 \end{DoxyReturn}
 
@@ -155,6 +215,18 @@ Definition at line \mbox{\hyperlink{_operations_8cpp_source_l00040}{40}} of file
 Obtém um aeroporto por código ou nome. 
 
 Obtém um aeroporto pelo código ou nome.
+
+
+\begin{DoxyParams}{Parameters}
+{\em code\+\_\+name} & Código ou nome do aeroporto a ser procurado. \\
+\hline
+{\em file\+Reader} & Instância de \doxylink{class_file_reader}{File\+Reader} para acessar os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O aeroporto correspondente ao código ou nome.
+\end{DoxyReturn}
+A complexidade deste método é O(\+N), onde N é o número total de aeroportos nos dados.
 
 
 \begin{DoxyParams}{Parameters}
@@ -194,6 +266,8 @@ Obtém as coordenadas do aeroporto mais próximo de um conjunto de coordenadas g
 \begin{DoxyReturn}{Returns}
 As coordenadas do aeroporto mais próximo.
 \end{DoxyReturn}
+A complexidade deste método é O(\+N), onde N é o número total de aeroportos nos dados.
+
 
 \begin{DoxyParams}{Parameters}
 {\em latitude} & Latitude da localização. \\

@@ -163,6 +163,17 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>O caminho de roteamento entre os aeroportos, evitando os aeroportos específicos.</dd></dl>
+<p>A complexidade deste método é dependente da implementação do algoritmo. Geralmente é O(V^3), onde V é o número de vértices (aeroportos).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>Aeroporto de partida. </td></tr>
+    <tr><td class="paramname">destination</td><td>Aeroporto de destino. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>Instância de <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> para acessar os dados. </td></tr>
+    <tr><td class="paramname">skipAirports</td><td>Lista de aeroportos a serem evitados no caminho. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>O caminho de roteamento entre os aeroportos, evitando os aeroportos específicos. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_operations_8cpp_source.html#l00137">137</a> of file <a class="el" href="_operations_8cpp_source.html">Operations.cpp</a>.</p>
@@ -232,6 +243,18 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>O caminho de roteamento entre os aeroportos, evitando aeroportos, usando pesos específicos.</dd></dl>
+<p>A complexidade deste método é dependente da implementação do algoritmo. Geralmente é O(V^3), onde V é o número de vértices (aeroportos).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>Aeroporto de partida. </td></tr>
+    <tr><td class="paramname">destination</td><td>Aeroporto de destino. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>Instância de <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> para acessar os dados. </td></tr>
+    <tr><td class="paramname">skipAirports</td><td>Lista de aeroportos a serem evitados no caminho. </td></tr>
+    <tr><td class="paramname">allowedWeights</td><td>Lista de pesos permitidos no caminho. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>O caminho de roteamento entre os aeroportos, evitando aeroportos e pesos específicos. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_operations_8cpp_source.html#l00065">65</a> of file <a class="el" href="_operations_8cpp_source.html">Operations.cpp</a>.</p>
@@ -279,6 +302,16 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Encontra todos os caminhos de menor comprimento entre dois aeroportos. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>Aeroporto de partida. </td></tr>
+    <tr><td class="paramname">destination</td><td>Aeroporto de destino. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>Instância de <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> para acessar os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Conjunto de caminhos de menor comprimento entre os aeroportos.</dd></dl>
+<p>A complexidade deste método é dependente da implementação do algoritmo. Geralmente é O(V^3), onde V é o número de vértices (aeroportos).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">source</td><td>Aeroporto de partida. </td></tr>
@@ -336,6 +369,15 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Lista de códigos de aeroportos na cidade especificada.</dd></dl>
+<p>A complexidade deste método é O(N), onde N é o número total de aeroportos nos dados.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">CityName</td><td>Nome da cidade para buscar aeroportos. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>Instância de <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> para acessar os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>Lista de códigos de aeroportos na cidade especificada. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_operations_8cpp_source.html#l00040">40</a> of file <a class="el" href="_operations_8cpp_source.html">Operations.cpp</a>.</p>
@@ -378,6 +420,15 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Obtém um aeroporto por código ou nome. </p>
 <p>Obtém um aeroporto pelo código ou nome.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">code_name</td><td>Código ou nome do aeroporto a ser procurado. </td></tr>
+    <tr><td class="paramname">fileReader</td><td>Instância de <a class="el" href="class_file_reader.html" title="Classe responsável pela leitura de dados de arquivos.">FileReader</a> para acessar os dados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>O aeroporto correspondente ao código ou nome.</dd></dl>
+<p>A complexidade deste método é O(N), onde N é o número total de aeroportos nos dados.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">code_name</td><td>Código ou nome do aeroporto a ser procurado. </td></tr>
@@ -442,6 +493,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>As coordenadas do aeroporto mais próximo.</dd></dl>
+<p>A complexidade deste método é O(N), onde N é o número total de aeroportos nos dados.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">latitude</td><td>Latitude da localização. </td></tr>
