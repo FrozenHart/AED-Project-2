@@ -74,6 +74,11 @@ void UI::run(FileReader x) {
     }
 }
 
+/**
+ * @brief Gera o menu de opções para interação com o sistema.
+ * @return Uma string contendo o menu de opções.
+ */
+
 string UI::print_menu() {
     string ss;
     ss += "--------------------------------------------------------------------------------\n";
@@ -107,6 +112,12 @@ string UI::print_menu() {
     return ss;
 }
 
+/**
+ * @brief Retorna o número global de aeroportos.
+ * @param x Instância de FileReader para acessar os dados do sistema.
+ * @return Uma string contendo o número global de aeroportos.
+ */
+
 string UI::point1(FileReader x) {//3.1
     string ss;
     ss += " Global Number of Airports: ";
@@ -114,6 +125,13 @@ string UI::point1(FileReader x) {//3.1
     ss +="\n";
     return ss;
 }
+
+/**
+ * @brief Método para obter informações sobre um ou mais aeroportos.
+ * @param code Código, nome da cidade ou coordenadas do aeroporto.
+ * @param fileReader Instância de FileReader para acessar os dados do sistema.
+ * @return Vetor de strings com as informações do aeroporto correspondente.
+ */
 
 string UI::point2(FileReader x) {//3.1
 
@@ -123,6 +141,15 @@ string UI::point2(FileReader x) {//3.1
     ss +="\n";
     return ss;
 }
+
+/**
+ * @brief Calcula o número global de voos no sistema.
+ *
+ * Esta função calcula o número total de voos no sistema e retorna essa contagem em uma string.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string contendo o número total de voos no sistema.
+ */
 
 string UI::point3(FileReader x) {//3.2
     cout << " Insert Airport Code: ";
@@ -134,6 +161,16 @@ string UI::point3(FileReader x) {//3.2
     ss +="\n";
     return ss;
 }
+
+/**
+ * @brief Calcula o número de voos a partir de um código de aeroporto específico.
+ *
+ * Esta função solicita um código de aeroporto como entrada, calcula o número de voos associados
+ * a esse aeroporto e retorna essa contagem em uma string.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string contendo o número de voos associados ao aeroporto especificado.
+ */
 
 string UI::point4(FileReader x) {//3.2
     cout << " Insert Airport Code: ";
@@ -149,6 +186,16 @@ string UI::point4(FileReader x) {//3.2
     return ss;
 }
 
+/**
+ * @brief Calcula o número de companhias aéreas a partir de um código de aeroporto específico.
+ *
+ * Este método recebe um código de aeroporto como entrada, calcula o número de companhias aéreas
+ * associadas a esse aeroporto e retorna essa contagem em uma string.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string contendo o número de companhias aéreas associadas ao aeroporto especificado.
+ */
+
 string UI::point5(FileReader x) {//3.3
     cout << " City Name: ";
     string city_name;
@@ -162,6 +209,16 @@ string UI::point5(FileReader x) {//3.3
     ss +="\n";
     return ss;
 }
+
+/**
+ * @brief Calcula o número de voos a partir de uma cidade específica.
+ *
+ * Este método recebe o nome de uma cidade como entrada e calcula o número de voos
+ * que partem dessa cidade, retornando essa contagem em uma string.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string contendo o número de voos que partem da cidade especificada.
+ */
 
 string UI::point6(FileReader x) {//3.3
     string ss;
@@ -178,6 +235,16 @@ string UI::point6(FileReader x) {//3.3
     return ss;
 }
 
+/**
+ * @brief Determina o número de voos de cada cidade no sistema.
+ *
+ * Este método calcula e exibe o número de voos partindo de cada cidade no sistema,
+ * listando o nome da cidade e a quantidade de voos que saem dela.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string contendo o número de voos de cada cidade.
+ */
+
 string UI::point7(FileReader x){ //3.3
 
     string ss;
@@ -191,6 +258,16 @@ string UI::point7(FileReader x){ //3.3
     }
     return ss;
 }
+
+/**
+ * @brief Determina o número de voos de cada aeroporto no sistema.
+ *
+ * Este método calcula e exibe o número de voos partindo de cada aeroporto no sistema,
+ * listando o nome do aeroporto e a quantidade de voos saindo dele.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string contendo o número de voos de cada aeroporto.
+ */
 
 string UI::point8(FileReader x) { //3.4
 
@@ -207,6 +284,15 @@ string UI::point8(FileReader x) { //3.4
     return ss;
 }
 
+/**
+ * @brief Determina o número de voos partindo de uma cidade para países diferentes.
+ *
+ * Este método solicita o nome de uma cidade como entrada e verifica o número de voos partindo dessa cidade para destinos em países distintos.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string contendo o número de voos partindo da cidade especificada para diferentes países.
+ */
+
 string UI::point9(FileReader x) { //3.4
 
     cout << " Airport Code: ";
@@ -221,6 +307,15 @@ string UI::point9(FileReader x) { //3.4
     return ss;
 
 }
+
+/**
+ * @brief Determina o número de voos partindo de um aeroporto para países diferentes.
+ *
+ * Este método solicita um código de aeroporto como entrada e verifica o número de voos partindo desse aeroporto para destinos em países distintos.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string contendo o número de voos partindo do aeroporto especificado para diferentes países.
+ */
 
 string UI::point10(FileReader x) { //3.5
     cout << " Airport Code: ";
@@ -237,6 +332,16 @@ string UI::point10(FileReader x) { //3.5
     ss +="\n";
     return ss;
 }
+
+/**
+ * @brief Identifica e exibe o número de destinos (cidades, países e aeroportos) acessíveis a partir de um aeroporto.
+ *
+ * Este método solicita um código de aeroporto como entrada e verifica a quantidade de destinos acessíveis a partir desse aeroporto.
+ * Calcula o número de cidades, países e aeroportos alcançáveis a partir do aeroporto especificado.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string contendo o número de destinos alcançáveis a partir do aeroporto especificado, separados por cidades, países e aeroportos.
+ */
 
 string UI::point11(FileReader x) { //3.6
     cout << " Airport Code: ";
@@ -259,6 +364,18 @@ string UI::point11(FileReader x) { //3.6
     ss +="\n";
     return ss;
 }
+
+/**
+ * @brief Calcula o número de destinos alcançáveis a partir de um determinado aeroporto em um número específico de paradas.
+ *
+ * Este método solicita ao usuário um código de aeroporto e o número desejado de paradas. Em seguida, utiliza essas informações
+ * para calcular o número de destinos alcançáveis (cidades, países e aeroportos) a partir do aeroporto especificado, considerando
+ * o número de paradas fornecido.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string contendo o número de destinos alcançáveis a partir do aeroporto especificado, dentro do número específico de paradas.
+ */
+
 /*
 string UI::point12(FileReader x) { //3.7
     string ss;
@@ -285,6 +402,16 @@ string UI::point13(FileReader x) { //3.8
     return ss;
 }
 
+/**
+ * @brief Identifica e lista os aeroportos com maior tráfego, exibindo o número especificado de aeroportos com mais tráfego.
+ *
+ * Este método solicita um número específico de aeroportos com maior tráfego a ser exibido.
+ * Em seguida, identifica e lista os aeroportos com base na quantidade de tráfego (número de voos).
+ * Para cada aeroporto identificado, mostra o nome, o código e o número de voos associados a ele.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string contendo a lista dos aeroportos com maior tráfego, seus códigos e o número de voos associados a cada um.
+ */
 
 string UI::point14(FileReader x) { //3.9
     string ss;
@@ -298,6 +425,18 @@ string UI::point14(FileReader x) { //3.9
     ss+="\n";
     return ss;
 }
+
+/**
+ * @brief Calcula e lista os aeroportos essenciais no sistema, mostrando o número de voos associados a cada um.
+ *
+ * Este método determina e lista os aeroportos considerados essenciais com base em uma análise estatística.
+ * Para cada aeroporto essencial encontrado, exibe o nome, o código e o número de voos associados a ele.
+ * Também apresenta o número total de aeroportos essenciais identificados.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string contendo a lista de aeroportos essenciais, seus códigos e o número de voos associados a cada um,
+ * além do número total de aeroportos essenciais identificados.
+ */
 
 string UI::point15(FileReader x) { //4
     cout << " Source Airport: \n";
@@ -331,6 +470,17 @@ string UI::point15(FileReader x) { //4
     }
     return ss;
 }
+
+/**
+ * @brief Encontra a melhor opção de voo entre dois aeroportos com o menor número de paradas.
+ *
+ * Este método interage com o usuário para obter informações sobre o aeroporto de origem e destino.
+ * Em seguida, chama a função Find_paths_min_length para calcular a melhor rota possível entre os aeroportos,
+ * considerando o menor número de paradas entre eles.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string representando a melhor opção de voo entre os aeroportos com o menor número de paradas.
+ */
 
 string UI::point16(FileReader x) { //5
     cout << " Source Airport: \n";
@@ -380,6 +530,16 @@ string UI::point16(FileReader x) { //5
     return ss;
 }
 
+/**
+ * @brief Encontra a melhor opção de voo entre dois aeroportos, permitindo a exclusão de alguns aeroportos intermediários.
+ *
+ * Este método interage com o usuário para obter informações sobre o aeroporto de origem, destino e a quantidade de aeroportos intermediários
+ * a serem excluídos da rota. Em seguida, chama a função Find_path_RAirports para calcular a melhor rota possível,
+ * excluindo os aeroportos intermediários fornecidos.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string representando a melhor opção de voo entre os aeroportos, excluindo alguns intermediários, se especificados.
+ */
 
 string UI::point17(FileReader x) { //5
     cout << " Source Airport Code: \n";
@@ -444,6 +604,17 @@ string UI::point17(FileReader x) { //5
     return ss;
 }
 
+/**
+ * @brief Retorna a melhor opção de voo entre dois aeroportos, considerando várias restrições.
+ *
+ * Este método solicita ao usuário informações sobre o aeroporto de origem, destino, número de escalas a serem puladas,
+ * e as companhias aéreas permitidas para a rota. Em seguida, chama a função Find_path_RAirports para encontrar a
+ * melhor rota possível, evitando os aeroportos pulados e usando as companhias aéreas permitidas.
+ *
+ * @param x Instância de FileReader contendo os dados do sistema.
+ * @return Uma string representando a melhor opção de voo com base nas restrições fornecidas.
+ */
+
 vector<string> UI::airport(string code, const FileReader& fileReader) {
     if (code.size() == 3 && std::all_of(code.begin(), code.end(), ::isupper)) {
         vector<string> airportCities;
@@ -485,6 +656,13 @@ vector<string> UI::airport(string code, const FileReader& fileReader) {
     return {};
 }
 
+/**
+ * @brief Verifica se existe algum aeroporto com o nome especificado.
+ * @param name Nome do aeroporto a ser verificado.
+ * @param fileReader Instância de FileReader para acessar os dados do sistema.
+ * @return True se existir um aeroporto com o nome especificado, False caso contrário.
+ */
+
 bool UI::existes_airport_from_name(string name, const FileReader &fileReader) {
     for(auto x: fileReader.get_Airports()){
         if(x.second.get_Name() == name){
@@ -493,6 +671,13 @@ bool UI::existes_airport_from_name(string name, const FileReader &fileReader) {
     }
     return false;
 }
+
+/**
+ * @brief Obtém o código do aeroporto a partir do nome especificado.
+ * @param name Nome do aeroporto do qual deseja-se obter o código.
+ * @param fileReader Instância de FileReader para acessar os dados do sistema.
+ * @return Código do aeroporto correspondente ao nome especificado.
+ */
 
 string UI::get_airport_code(string name, const FileReader &fileReader) {
     for(auto x: fileReader.get_Airports()){
@@ -503,3 +688,9 @@ string UI::get_airport_code(string name, const FileReader &fileReader) {
     return "";
 }
 
+/**
+ * @brief Obtém o código do aeroporto a partir do nome especificado.
+ * @param name Nome do aeroporto do qual deseja-se obter o código.
+ * @param fileReader Instância de FileReader contendo os dados do sistema.
+ * @return O código do aeroporto correspondente ao nome especificado. Se não for encontrado, retorna uma string vazia.
+ */

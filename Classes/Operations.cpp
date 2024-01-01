@@ -1,5 +1,13 @@
 #include "Operations.h"
 
+/**
+ * @brief Obtém as coordenadas do aeroporto mais próximo de um conjunto de coordenadas geográficas.
+ * @param latitude Latitude da localização.
+ * @param longitude Longitude da localização.
+ * @param fileReader Instância de FileReader para acessar os dados.
+ * @return O código do aeroporto mais próximo das coordenadas fornecidas.
+ */
+
 string Operations::get_Airport_Coordinates(float latitude, float longitude,FileReader fileReader) {
     string code;
     float minDistance = numeric_limits<float>::max();
@@ -22,13 +30,37 @@ string Operations::get_Airport_Coordinates(float latitude, float longitude,FileR
     return code;
 }
 
+/**
+ * @brief Obtém uma lista de códigos de aeroportos com base no nome de uma cidade.
+ * @param CityName Nome da cidade para buscar aeroportos.
+ * @param fileReader Instância de FileReader para acessar os dados.
+ * @return Lista de códigos de aeroportos na cidade especificada.
+ */
+
 vector<string> Operations::get_Airport_CityName(string CityName,FileReader fileReader) {
     return fileReader.get_Airports_Cities().at(CityName);
 }
 
+/**
+ * @brief Obtém um aeroporto pelo código ou nome.
+ * @param code_name Código ou nome do aeroporto a ser procurado.
+ * @param fileReader Instância de FileReader para acessar os dados.
+ * @return O aeroporto correspondente ao código ou nome.
+ */
+
 Airport Operations::get_Airport_CodeName(string code_name,FileReader fileReader) {
     return fileReader.get_Airports().at(code_name);
 }
+
+/**
+ * @brief Encontra um caminho de roteamento entre dois aeroportos, evitando certos aeroportos e pesos específicos.
+ * @param source Aeroporto de partida.
+ * @param destination Aeroporto de destino.
+ * @param fileReader Instância de FileReader para acessar os dados.
+ * @param skipAirports Lista de aeroportos a serem evitados no caminho.
+ * @param allowedWeights Lista de pesos permitidos no caminho.
+ * @return O caminho de roteamento entre os aeroportos, evitando aeroportos e pesos específicos.
+ */
 
 vector<string> Operations::Find_path_RAirports(string source, string destination, FileReader fileReader, vector<string> skipAirports, vector<string> allowedWeights) {
     vector<string> path;
@@ -92,6 +124,16 @@ vector<string> Operations::Find_path_RAirports(string source, string destination
     cout << "No path found." << endl;
     return path;  // Empty path
 }
+
+/**
+ * @brief Encontra um caminho de roteamento entre dois aeroportos, evitando certos aeroportos.
+ * @param source Aeroporto de partida.
+ * @param destination Aeroporto de destino.
+ * @param fileReader Instância de FileReader para acessar os dados.
+ * @param skipAirports Lista de aeroportos a serem evitados no caminho.
+ * @return O caminho de roteamento entre os aeroportos, evitando os aeroportos específicos.
+ */
+
 vector<string> Operations::Find_path_RAirports(string source, string destination, FileReader fileReader, vector<string> skipAirports) {
     vector<string> path;
 
@@ -140,6 +182,14 @@ vector<string> Operations::Find_path_RAirports(string source, string destination
     return path;  // Empty path
 }
 
+/**
+ * @brief Encontra todos os caminhos de menor comprimento entre dois aeroportos.
+ * @param source Aeroporto de partida.
+ * @param destination Aeroporto de destino.
+ * @param fileReader Instância de FileReader para acessar os dados.
+ * @return Conjunto de caminhos de menor comprimento entre os aeroportos.
+ */
+
 set<vector<string>> Operations::Find_paths_min_length(string source, string destination, const FileReader& fileReader) {
     set<vector<string>> allPaths;
 
@@ -186,4 +236,16 @@ set<vector<string>> Operations::Find_paths_min_length(string source, string dest
 
     return allPaths;
 }
+
+/**
+ * @brief Encontra todos os caminhos de menor comprimento entre dois aeroportos.
+ *
+ * Esse método utiliza a busca em largura (BFS) para encontrar todos os caminhos de menor
+ * comprimento entre dois aeroportos em um grafo de rotas aéreas.
+ *
+ * @param source Aeroporto de partida.
+ * @param destination Aeroporto de destino.
+ * @param fileReader Instância de FileReader para acessar os dados do grafo de rotas aéreas.
+ * @return Conjunto de caminhos de menor comprimento entre os aeroportos.
+ */
 
