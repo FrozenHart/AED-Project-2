@@ -169,7 +169,7 @@ public:
     /**
     * @brief Encontra o número máximo de paradas entre quaisquer dois aeroportos no FileReader.
     * @param fileReader O objeto FileReader contendo os dados.
-    * @return Tupla contendo o caminho mais longo, o número máximo de paradas e o número de caminhos com o mesmo número de paradas.
+    * @return tuplo contendo o caminho mais longo, o número máximo de paradas e o número de caminhos com o mesmo número de paradas.
     * @details A complexidade deste método depende do número de aeroportos alcançáveis e do número de paradas. Em um grafo com V vértices e E arestas, a complexidade é aproximadamente O(V^2 * (V + E)).
     */
     static tuple<vector<pair<string, string>>, int,int> getMaxStops(FileReader &fileReader); //3.7

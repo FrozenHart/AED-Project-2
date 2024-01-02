@@ -460,7 +460,7 @@ int Statistics::number_of_reacheble_countries_from_airport(const string &airport
  * registrando os caminhos com o maior número de paragens e contabilizando o número de caminhos máximos existentes.
  *
  * @param fileReader Referência para o objeto FileReader que contém as informações do grafo de voos.
- * @return Uma tupla contendo:
+ * @return Um tuplo contendo:
  *         - Um vetor de pares de strings representando os pares de aeroportos que compõem os caminhos mais longos.
  *         - O número máximo de paragens encontrado.
  *         - O número de caminhos máximos (caminhos com o mesmo número máximo de paragens).

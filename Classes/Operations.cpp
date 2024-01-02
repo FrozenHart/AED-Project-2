@@ -32,7 +32,7 @@ string Operations::get_Airport_Coordinates(float latitude, float longitude,FileR
 
 /**
  * @brief Obtém uma lista de códigos de aeroportos com base no nome de uma cidade.
- * @param CityName Nome da cidade para buscar aeroportos.
+ * @param CityName Nome da cidade para procurar aeroportos.
  * @param fileReader Instância de FileReader para acessar os dados.
  * @return Lista de códigos de aeroportos na cidade especificada.
  */
@@ -53,13 +53,13 @@ Airport Operations::get_Airport_CodeName(string code_name,FileReader fileReader)
 }
 
 /**
- * @brief Encontra um caminho de roteamento entre dois aeroportos, evitando certos aeroportos e pesos específicos.
+ * @brief Encontra um caminho de roteamento entre dois aeroportos, evitando certos aeroportos, pesos específicos.
  * @param source Aeroporto de partida.
  * @param destination Aeroporto de destino.
  * @param fileReader Instância de FileReader para acessar os dados.
  * @param skipAirports Lista de aeroportos a serem evitados no caminho.
  * @param allowedWeights Lista de pesos permitidos no caminho.
- * @return O caminho de roteamento entre os aeroportos, evitando aeroportos e pesos específicos.
+ * @return O caminho de roteamento entre os aeroportos, evitando aeroportos, pesos específicos.
  */
 
 vector<string> Operations::Find_path_RAirports(string source, string destination, FileReader fileReader, vector<string> skipAirports, vector<string> allowedWeights) {
